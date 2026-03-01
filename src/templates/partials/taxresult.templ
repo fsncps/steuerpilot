@@ -1,0 +1,38 @@
+package partials
+
+import (
+	"strconv"
+	"steuerpilot-go/internal/models"
+	"steuerpilot-go/internal/util"
+)
+
+templ TaxResult(e models.Steuerergebnis) {
+	<div class="bg-white border rounded-lg p-5 shadow-sm">
+		<h3 class="font-semibold text-lg mb-4">
+			Steuerberechnung { e.Gemeinde } { strconv.Itoa(e.Steuerperiode) }
+		</h3>
+		<dl class="space-y-1.5 text-sm">
+			@taxLine("Steuerbares Einkommen", e.SteuerbaresEinkommen)
+			@taxLine("Steuerbares Vermögen", e.SteuerbaresVermoegen)
+			<div class="border-t my-3"></div>
+			@taxLine("Kantonssteuer", e.Kantonssteuer)
+			@taxLine("Gemeindesteuer", e.Gemeindesteuer)
+			@taxLine("Kirchensteuer", e.Kirchensteuer)
+			@taxLine("Bundessteuer", e.Bundessteuer)
+			@taxLine("Vermögenssteuer Kanton", e.VermoegensSteuerKanton)
+			@taxLine("Vermögenssteuer Gemeinde", e.VermoegensSteuerGemeinde)
+			<div class="border-t my-3"></div>
+			<div class="flex justify-between font-bold text-base">
+				<dt>Total Steuern</dt>
+				<dd class="text-blue-700">{ util.FormatCHF(e.TotalSteuer) }</dd>
+			</div>
+		</dl>
+	</div>
+}
+
+templ taxLine(label string, amount float64) {
+	<div class="flex justify-between">
+		<dt class="text-gray-600">{ label }</dt>
+		<dd>{ util.FormatCHF(amount) }</dd>
+	</div>
+}

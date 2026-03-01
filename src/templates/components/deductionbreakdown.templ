@@ -1,0 +1,13 @@
+package components
+
+import "steuerpilot-go/internal/models"
+
+// DeductionBreakdown renders an itemised deduction list. Currently unused — inlined in taxresult.templ.
+templ DeductionBreakdown(abzuege models.Abzuege) {
+	<dl class="space-y-1 text-sm">
+		<div class="flex justify-between">
+			<dt class="text-gray-500">Säule 3a</dt>
+			<dd>{ "—" }</dd>
+		</div>
+	</dl>
+}

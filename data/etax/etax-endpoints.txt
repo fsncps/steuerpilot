@@ -1,0 +1,10 @@
+/appinfo/versions.json
+/config/config.json
+/config/keycloak.json
+/delegation/all
+/delegation/invitation/accepted/delete
+/delegation/invitation/accepted/list
+/delegation/invitation/delete
+/delegation/invitation/new
+/delegation/invitation/pending/list
+/delegation/shares/given/delete

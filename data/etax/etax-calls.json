@@ -1,0 +1,178 @@
+[
+  {
+    "dir": "→",
+    "method": "GET",
+    "url": "https://etax.sg.ch/"
+  },
+  {
+    "dir": "←",
+    "status": 200,
+    "url": "https://etax.sg.ch/",
+    "body": "<!DOCTYPE html>\n<html lang=\"de-CH\">\n<head>\n    <meta charset=\"utf-8\">\n    <title>E-Tax SG</title>\n    <meta name=\"application-name\" content=\"eTax SG\">\n    <meta content=\"width=device-width, initial-scale=1\" name=\"viewport\">\n    <link rel=\"icon\" href=\"/assets/favicon-sg-Gu28c2gQ.ico\" type=\"image/x-icon\">\n  <script type=\"module\" crossorigin src=\"/assets/index-Dpr4lTsD.js\"></script>\n  <link rel=\"stylesheet\" crossorigin href=\"/assets/index-DPrYowF5.css\">\n</head>\n<body>\n<noscript>You need to enable J"
+  },
+  {
+    "dir": "→",
+    "method": "GET",
+    "url": "https://etax.sg.ch/config/keycloak.json"
+  },
+  {
+    "dir": "→",
+    "method": "GET",
+    "url": "https://etax.sg.ch/auth/realms/eTax-SG/protocol/openid-connect/auth?client_id=eTax-SG&redirect_uri=https%3A%2F%2Fetax.sg.ch%2F&state=3e1c554c-315d-4b45-ba62-976b9ec830ba&response_mode=fragment&response_type=code&scope=openid&nonce=9cdf1e6d-2bbb-4ef6-8222-0359c2841f5f&code_challenge=ujoQKU6MDBrs0yMy8lAfZ1C4SSWzcytTn4BPqaMz5ZM&code_challenge_method=S256"
+  },
+  {
+    "dir": "←",
+    "status": 200,
+    "url": "https://etax.sg.ch/config/keycloak.json",
+    "body": "{\"auth-server-url\":\"https://etax.sg.ch/auth\",\"realm\":\"eTax-SG\",\"resource\":\"eTax-SG\"}"
+  },
+  {
+    "dir": "→",
+    "method": "GET",
+    "url": "https://etax.sg.ch/"
+  },
+  {
+    "dir": "→",
+    "method": "GET",
+    "url": "https://etax.sg.ch/config/keycloak.json"
+  },
+  {
+    "dir": "←",
+    "status": 200,
+    "url": "https://etax.sg.ch/",
+    "body": "<!DOCTYPE html>\n<html lang=\"de-CH\">\n<head>\n    <meta charset=\"utf-8\">\n    <title>E-Tax SG</title>\n    <meta name=\"application-name\" content=\"eTax SG\">\n    <meta content=\"width=device-width, initial-scale=1\" name=\"viewport\">\n    <link rel=\"icon\" href=\"/assets/favicon-sg-Gu28c2gQ.ico\" type=\"image/x-icon\">\n  <script type=\"module\" crossorigin src=\"/assets/index-Dpr4lTsD.js\"></script>\n  <link rel=\"stylesheet\" crossorigin href=\"/assets/index-DPrYowF5.css\">\n</head>\n<body>\n<noscript>You need to enable J"
+  },
+  {
+    "dir": "→",
+    "method": "POST",
+    "url": "https://etax.sg.ch/auth/realms/eTax-SG/protocol/openid-connect/token",
+    "body": "code=41adb38c-6ca9-4365-bbb7-4295077c1d8e.c59c8fe4-ea68-4504-978b-15aa5418e644.9f2d2e5f-c478-4109-a35e-3734f36f9a1a&grant_type=authorization_code&client_id=eTax-SG&redirect_uri=https%3A%2F%2Fetax.sg.c"
+  },
+  {
+    "dir": "←",
+    "status": 200,
+    "url": "https://etax.sg.ch/config/keycloak.json",
+    "body": "{\"auth-server-url\":\"https://etax.sg.ch/auth\",\"realm\":\"eTax-SG\",\"resource\":\"eTax-SG\"}"
+  },
+  {
+    "dir": "→",
+    "method": "POST",
+    "url": "https://etax.sg.ch/services/auth/keepalive"
+  },
+  {
+    "dir": "→",
+    "method": "GET",
+    "url": "https://etax.sg.ch/config/config.json"
+  },
+  {
+    "dir": "←",
+    "status": 200,
+    "url": "https://etax.sg.ch/auth/realms/eTax-SG/protocol/openid-connect/token",
+    "body": "{\"access_token\":\"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuazlPVEI3TzdvRGxMLTZZWHpNVnhXb2N4MnVqNWNVOERsc3p0eVFNVHBBIn0.eyJleHAiOjE3NzE4NDM5NjUsImlhdCI6MTc3MTg0MzY2NSwiYXV0aF90aW1lIjoxNzcxODQzNTAwLCJqdGkiOiJhYjU4NWRiMC1kZmE2LTQyMmEtOTQ2ZS1hMDg0YmJkNTQ2MmEiLCJpc3MiOiJodHRwczovL2V0YXguc2cuY2gvYXV0aC9yZWFsbXMvZVRheC1TRyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI2NDVlZGE1Yy02MDNhLTQ4MDMtYjUzMS03ZjViMzliMzRjNGQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJlVGF4LVNHIiwic2lkIjoiYzU5YzhmZTQtZWE2OC00NTA0LTk3OGItMTVhYTU"
+  },
+  {
+    "dir": "→",
+    "method": "GET",
+    "url": "https://etax.sg.ch/config/keycloak.json"
+  },
+  {
+    "dir": "←",
+    "status": 200,
+    "url": "https://etax.sg.ch/config/config.json",
+    "body": "{\"accountUrl\":\"https://elogin.sg.ch/settings\",\"appUrl\":\"/\",\"defaultGroupId\":\"ch.np.sg.2025\",\"delegation\":true,\"jpAppUrl\":\"/etax2/doc/\",\"statusMessages\":true,\"supportedGroupIds\":[\"ch.np.sg.2026\",\"ch.np.sg.2025\",\"ch.jp.sg.2026\",\"ch.jp.sg.2025\"]}"
+  },
+  {
+    "dir": "←",
+    "status": 200,
+    "url": "https://etax.sg.ch/services/auth/keepalive",
+    "body": "{\"OK\":true}"
+  },
+  {
+    "dir": "→",
+    "method": "GET",
+    "url": "https://etax.sg.ch/delegation/user"
+  },
+  {
+    "dir": "←",
+    "status": 200,
+    "url": "https://etax.sg.ch/config/keycloak.json",
+    "body": "{\"auth-server-url\":\"https://etax.sg.ch/auth\",\"realm\":\"eTax-SG\",\"resource\":\"eTax-SG\"}"
+  },
+  {
+    "dir": "→",
+    "method": "POST",
+    "url": "https://etax.sg.ch/services/applicationmessages/search?activeOnly=true",
+    "body": "{}"
+  },
+  {
+    "dir": "←",
+    "status": 200,
+    "url": "https://etax.sg.ch/delegation/user",
+    "body": "{\"userId\":\"645eda5c-603a-4803-b531-7f5b39b34c4d\",\"email\":\"richardrobinschmitz@gmail.com\",\"fname\":\"Richard\",\"lname\":\"Schmitz-Abraham\",\"mobile\":null}"
+  },
+  {
+    "dir": "→",
+    "method": "POST",
+    "url": "https://etax.sg.ch/services/datamodel/search",
+    "body": "{\"groupId\":\"ch.np.sg.2026\"}"
+  },
+  {
+    "dir": "←",
+    "status": 200,
+    "url": "https://etax.sg.ch/services/applicationmessages/search?activeOnly=true",
+    "body": "[]"
+  },
+  {
+    "dir": "→",
+    "method": "POST",
+    "url": "https://etax.sg.ch/services/datamodel/search",
+    "body": "{\"groupId\":\"ch.np.sg.2025\"}"
+  },
+  {
+    "dir": "←",
+    "status": 200,
+    "url": "https://etax.sg.ch/services/datamodel/search",
+    "body": "{\"limit\":-1,\"taxYear\":2026,\"values\":[],\"OK\":true}"
+  },
+  {
+    "dir": "→",
+    "method": "POST",
+    "url": "https://etax.sg.ch/services/datamodel/search",
+    "body": "{\"groupId\":\"ch.jp.sg.2026\"}"
+  },
+  {
+    "dir": "←",
+    "status": 200,
+    "url": "https://etax.sg.ch/services/datamodel/search",
+    "body": "{\"limit\":-1,\"taxYear\":2025,\"values\":[],\"OK\":true}"
+  },
+  {
+    "dir": "→",
+    "method": "POST",
+    "url": "https://etax.sg.ch/services/datamodel/search",
+    "body": "{\"groupId\":\"ch.jp.sg.2025\"}"
+  },
+  {
+    "dir": "←",
+    "status": 200,
+    "url": "https://etax.sg.ch/services/datamodel/search",
+    "body": "{\"limit\":-1,\"taxYear\":2026,\"values\":[],\"OK\":true}"
+  },
+  {
+    "dir": "←",
+    "status": 200,
+    "url": "https://etax.sg.ch/services/datamodel/search",
+    "body": "{\"limit\":-1,\"taxYear\":2025,\"values\":[],\"OK\":true}"
+  },
+  {
+    "dir": "→",
+    "method": "GET",
+    "url": "https://etax.sg.ch/appinfo/versions.json"
+  },
+  {
+    "dir": "←",
+    "status": 200,
+    "url": "https://etax.sg.ch/appinfo/versions.json",
+    "body": "{\"app\": \"1.0.32\", \"backend\": \"1.0.32\", \"print-server\": \"1.0.32\", \"client\": \"1.0.32\", \"thumbnail-server\": \"1.6.1-edge\", \"sr-server\": \"1.5.0-edge\", \"barcode-extraction-utils\": \"1.0.1\"}"
+  }
+]

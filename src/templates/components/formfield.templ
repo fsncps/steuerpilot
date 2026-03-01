@@ -1,0 +1,9 @@
+package components
+
+// FormField renders a labelled form field. Currently unused — inline fields are used in wizard steps.
+templ FormField(label, name, value string) {
+	<div>
+		<label class="block text-sm font-medium mb-1">{ label }</label>
+		<input type="text" name={ name } value={ value } class="w-full border rounded px-3 py-2 text-sm"/>
+	</div>
+}

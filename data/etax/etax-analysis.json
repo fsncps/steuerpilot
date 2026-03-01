@@ -1,0 +1,714 @@
+{
+  "apiCalls": [
+    {
+      "method": "GET",
+      "url": "https://etax.sg.ch/",
+      "headers": {
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\""
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://etax.sg.ch/assets/index-Dpr4lTsD.js",
+      "headers": {
+        "origin": "https://etax.sg.ch",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://etax.sg.ch/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://etax.sg.ch/config/keycloak.json",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://etax.sg.ch/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "accept": "application/json",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://etax.sg.ch/auth/realms/eTax-SG/protocol/openid-connect/auth?client_id=eTax-SG&redirect_uri=https%3A%2F%2Fetax.sg.ch%2F&state=ec0aed27-af2f-4364-a0b0-b0fdd9735b69&response_mode=fragment&response_type=code&scope=openid&nonce=c95bf789-6ddb-4667-8350-b1ae6298f02f&code_challenge=nAEoBXqOpYiUaiY78SMagWWQRUVGzQMntha23EBOzGk&code_challenge_method=S256",
+      "headers": {
+        "referer": "https://etax.sg.ch/",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\""
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://etax.sg.ch/auth/realms/eTax-SG/broker/eLogin-oidc/login?session_code=qI-vkip7HTFJYrJFr_pSc7jZnj6scbg-utSZNtTaBOA&client_id=eTax-SG&tab_id=2iUXO6G8r38&client_data=eyJydSI6Imh0dHBzOi8vZXRheC5zZy5jaC8iLCJydCI6ImNvZGUiLCJybSI6ImZyYWdtZW50Iiwic3QiOiJlYzBhZWQyNy1hZjJmLTQzNjQtYTBiMC1iMGZkZDk3MzViNjkifQ",
+      "headers": {
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\""
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://elogin.sg.ch/auth/realms/elogin/protocol/openid-connect/auth?scope=openid+email+profile&state=E4MhP-qvrA_V_TkXm73N4NgpR2HQ4qeDsX9GjEvv5nU.2iUXO6G8r38.ny0uX8R4QQmjXjc082-aGg.eyJydSI6Imh0dHBzOi8vZXRheC5zZy5jaC8iLCJydCI6ImNvZGUiLCJybSI6ImZyYWdtZW50Iiwic3QiOiJlYzBhZWQyNy1hZjJmLTQzNjQtYTBiMC1iMGZkZDk3MzViNjkifQ&response_type=code&client_id=etax&redirect_uri=https%3A%2F%2Fetax.sg.ch%2Fauth%2Frealms%2FeTax-SG%2Fbroker%2FeLogin-oidc%2Fendpoint&code_challenge=VTrkVuQCjxS5WLkstyqHHRm6AD5z6uYpyhfGNOPmRhw&code_challenge_method=S256&nonce=MwaR0oAaLB5yOtEuTjLlkA",
+      "headers": {
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\""
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://elogin.sg.ch/auth/resources/1bzse/login/sg-egov/js/passwordVisibility.js",
+      "headers": {
+        "origin": "https://elogin.sg.ch",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://elogin.sg.ch/auth/resources/1bzse/login/sg-egov/js/authChecker.js",
+      "headers": {
+        "origin": "https://elogin.sg.ch",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://elogin.sg.ch/auth/resources/1bzse/common/keycloak/vendor/patternfly-v5/assets/fonts/RedHatText/RedHatText-Medium.woff2",
+      "headers": {
+        "origin": "https://elogin.sg.ch",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://elogin.sg.ch/auth/resources/1bzse/common/keycloak/vendor/patternfly-v5/assets/fonts/RedHatText/RedHatText-Regular.woff2",
+      "headers": {
+        "origin": "https://elogin.sg.ch",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://elogin.sg.ch/auth/realms/elogin/login-actions/authenticate?session_code=tHbpu3_ujZveo-q8DScf3BInkXa-mtGXyAcJEmgHMDg&execution=ef9bd48f-e3e0-444a-9839-069836088029&client_id=etax&tab_id=hWlWFtOpdsg&client_data=eyJydSI6Imh0dHBzOi8vZXRheC5zZy5jaC9hdXRoL3JlYWxtcy9lVGF4LVNHL2Jyb2tlci9lTG9naW4tb2lkYy9lbmRwb2ludCIsInJ0IjoiY29kZSIsInN0IjoiRTRNaFAtcXZyQV9WX1RrWG03M040TmdwUjJIUTRxZURzWDlHakV2djVuVS4yaVVYTzZHOHIzOC5ueTB1WDhSNFFRbWpYamMwODItYUdnLmV5SnlkU0k2SW1oMGRIQnpPaTh2WlhSaGVDNXpaeTVqYUM4aUxDSnlkQ0k2SW1OdlpHVWlMQ0p5YlNJNkltWnlZV2R0Wlc1MElpd2ljM1FpT2lKbFl6QmhaV1F5TnkxaFpqSm1MVFF6TmpRdFlUQmlNQzFpTUdaa1pEazNNelZpTmpraWZRIn0",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded",
+        "origin": "null",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\""
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://elogin.sg.ch/auth/realms/elogin/broker/agov-oidc/login?session_code=BgB-IF_lSf1zlTkQBbIWDPpxVZ1b6XepD97_foLNfKs&client_id=etax&tab_id=hWlWFtOpdsg&client_data=eyJydSI6Imh0dHBzOi8vZXRheC5zZy5jaC9hdXRoL3JlYWxtcy9lVGF4LVNHL2Jyb2tlci9lTG9naW4tb2lkYy9lbmRwb2ludCIsInJ0IjoiY29kZSIsInN0IjoiRTRNaFAtcXZyQV9WX1RrWG03M040TmdwUjJIUTRxZURzWDlHakV2djVuVS4yaVVYTzZHOHIzOC5ueTB1WDhSNFFRbWpYamMwODItYUdnLmV5SnlkU0k2SW1oMGRIQnpPaTh2WlhSaGVDNXpaeTVqYUM4aUxDSnlkQ0k2SW1OdlpHVWlMQ0p5YlNJNkltWnlZV2R0Wlc1MElpd2ljM1FpT2lKbFl6QmhaV1F5TnkxaFpqSm1MVFF6TmpRdFlUQmlNQzFpTUdaa1pEazNNelZpTmpraWZRIn0",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded",
+        "origin": "null",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\""
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://idp.agov.admin.ch/oauth2/authorize?scope=openid+profile+agovProfile+svnr+address+email&state=pXEUWsLhndmudxrf41ZQWVYV9gYFKgyJ3su__XYtkxc.hWlWFtOpdsg.hwlQhxT4QW2_TFrLbFUTKA.eyJydSI6Imh0dHBzOi8vZXRheC5zZy5jaC9hdXRoL3JlYWxtcy9lVGF4LVNHL2Jyb2tlci9lTG9naW4tb2lkYy9lbmRwb2ludCIsInJ0IjoiY29kZSIsInN0IjoiRTRNaFAtcXZyQV9WX1RrWG03M040TmdwUjJIUTRxZURzWDlHakV2djVuVS4yaVVYTzZHOHIzOC5ueTB1WDhSNFFRbWpYamMwODItYUdnLmV5SnlkU0k2SW1oMGRIQnpPaTh2WlhSaGVDNXpaeTVqYUM4aUxDSnlkQ0k2SW1OdlpHVWlMQ0p5YlNJNkltWnlZV2R0Wlc1MElpd2ljM1FpT2lKbFl6QmhaV1F5TnkxaFpqSm1MVFF6TmpRdFlUQmlNQzFpTUdaa1pEazNNelZpTmpraWZRIn0&response_type=code&client_id=CH-SG-LOGIN-ENCR&redirect_uri=https%3A%2F%2Felogin.sg.ch%2Fauth%2Frealms%2Felogin%2Fbroker%2Fagov-oidc%2Fendpoint&code_challenge=paL2B3kXnA_g6IlQL8aMYbKSPuFhDz-xrqSuZIB-W2w&code_challenge_method=S256&nonce=FbhpFLH5f5rXUPAw7xBt-g",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded",
+        "origin": "null",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\""
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://idp.agov.admin.ch/saml2/authenticate/CH-SG-LOGIN-ENCR?client_id=CH-SG-LOGIN-ENCR",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded",
+        "origin": "null",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\""
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://idp.agov.admin.ch/adfs/ls",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded",
+        "origin": "https://idp.agov.admin.ch",
+        "referer": "https://idp.agov.admin.ch/saml2/authenticate/CH-SG-LOGIN-ENCR?client_id=CH-SG-LOGIN-ENCR",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\""
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://auth.agov.admin.ch/SAML2/SSO/",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded",
+        "origin": "https://idp.agov.admin.ch",
+        "referer": "https://idp.agov.admin.ch/",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\""
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://auth.agov.admin.ch/nevislogrend/nevislogrend/applications/Auth_Realm_Main_IDP/webdata/static/preload.js",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://auth.agov.admin.ch/SAML2/SSO/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://auth.agov.admin.ch/nevislogrend/nevislogrend/applications/Auth_Realm_Main_IDP/webdata/static/js-code/mauth_usernameless.js",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://auth.agov.admin.ch/SAML2/SSO/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://auth.agov.admin.ch/nevislogrend/nevislogrend/applications/Auth_Realm_Main_IDP/webdata/static/js-code/loginMask.js",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://auth.agov.admin.ch/SAML2/SSO/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://auth.agov.admin.ch/nevislogrend/nevislogrend/applications/Auth_Realm_Main_IDP/webdata/static/js-code/otherLoginMethodsMobile.js",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://auth.agov.admin.ch/SAML2/SSO/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://auth.agov.admin.ch/nevislogrend/nevislogrend/applications/Auth_Realm_Main_IDP/webdata/static/bundle.js",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://auth.agov.admin.ch/SAML2/SSO/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://auth.agov.admin.ch/nevislogrend/nevislogrend/applications/Auth_Realm_Main_IDP/webdata/static/f2fa8f369db189665539.ttf",
+      "headers": {
+        "origin": "https://auth.agov.admin.ch",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://auth.agov.admin.ch/SAML2/SSO/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://auth.agov.admin.ch/nevislogrend/nevislogrend/applications/Auth_Realm_Main_IDP/webdata/static/022586a78ea7c9bee9da.ttf",
+      "headers": {
+        "origin": "https://auth.agov.admin.ch",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://auth.agov.admin.ch/SAML2/SSO/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://auth.agov.admin.ch/nevislogrend/nevislogrend/applications/Auth_Realm_Main_IDP/webdata/static/df87f53caf449a3b7572.ttf",
+      "headers": {
+        "origin": "https://auth.agov.admin.ch",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://auth.agov.admin.ch/SAML2/SSO/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://auth.agov.admin.ch/nevislogrend/nevislogrend/applications/Auth_Realm_Main_IDP/webdata/static/c51931730dc0184cb47a.woff2",
+      "headers": {
+        "origin": "https://auth.agov.admin.ch",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://auth.agov.admin.ch/SAML2/SSO/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://auth.agov.admin.ch/nevislogrend/nevislogrend/applications/Auth_Realm_Main_IDP/webdata/static/942a7be38dca65bca69b.woff2",
+      "headers": {
+        "origin": "https://auth.agov.admin.ch",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://auth.agov.admin.ch/SAML2/SSO/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://auth.agov.admin.ch/SAML2/SSO/",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://auth.agov.admin.ch/SAML2/SSO/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "content-type": "application/json",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://auth.agov.admin.ch/app-info/app-icon?entity-id=CH-SG-LOGIN-ENCR&lang=de",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://auth.agov.admin.ch/SAML2/SSO/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "accept": "image/svg+xml",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://auth.agov.admin.ch/SAML2/SSO/",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://auth.agov.admin.ch/SAML2/SSO/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "content-type": "application/json",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://auth.agov.admin.ch/SAML2/SSO/",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://auth.agov.admin.ch/SAML2/SSO/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "content-type": "application/json",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://auth.agov.admin.ch/SAML2/SSO/",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://auth.agov.admin.ch/SAML2/SSO/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "content-type": "application/json",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://auth.agov.admin.ch/SAML2/SSO/",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://auth.agov.admin.ch/SAML2/SSO/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "content-type": "application/json",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://auth.agov.admin.ch/SAML2/SSO/",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://auth.agov.admin.ch/SAML2/SSO/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "content-type": "application/json",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://auth.agov.admin.ch/SAML2/SSO/",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded",
+        "origin": "https://auth.agov.admin.ch",
+        "referer": "https://auth.agov.admin.ch/SAML2/SSO/",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\""
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://idp.agov.admin.ch/adfs/ls?SAMLart=AAQAALb4xNeYkL1QS%2BooBd0RFqzXEJ%2BHa4FLhV4P3tacD6iMmSWU866Yp8g%3D&RelayState=S2-ab896652910a6c2c3ede81ffd1e8b05f-874adcd14cf840fd-52c45690ce6a4376874eee39",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded",
+        "origin": "https://auth.agov.admin.ch",
+        "referer": "https://auth.agov.admin.ch/",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\""
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://idp.agov.admin.ch/login/saml2/sso/CH-SG-LOGIN-ENCR",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded",
+        "origin": "https://idp.agov.admin.ch",
+        "referer": "https://idp.agov.admin.ch/adfs/ls?SAMLart=AAQAALb4xNeYkL1QS%2BooBd0RFqzXEJ%2BHa4FLhV4P3tacD6iMmSWU866Yp8g%3D&RelayState=S2-ab896652910a6c2c3ede81ffd1e8b05f-874adcd14cf840fd-52c45690ce6a4376874eee39",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\""
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://idp.agov.admin.ch/oauth2/authorize?scope=openid+profile+agovProfile+svnr+address+email&state=pXEUWsLhndmudxrf41ZQWVYV9gYFKgyJ3su__XYtkxc.hWlWFtOpdsg.hwlQhxT4QW2_TFrLbFUTKA.eyJydSI6Imh0dHBzOi8vZXRheC5zZy5jaC9hdXRoL3JlYWxtcy9lVGF4LVNHL2Jyb2tlci9lTG9naW4tb2lkYy9lbmRwb2ludCIsInJ0IjoiY29kZSIsInN0IjoiRTRNaFAtcXZyQV9WX1RrWG03M040TmdwUjJIUTRxZURzWDlHakV2djVuVS4yaVVYTzZHOHIzOC5ueTB1WDhSNFFRbWpYamMwODItYUdnLmV5SnlkU0k2SW1oMGRIQnpPaTh2WlhSaGVDNXpaeTVqYUM4aUxDSnlkQ0k2SW1OdlpHVWlMQ0p5YlNJNkltWnlZV2R0Wlc1MElpd2ljM1FpT2lKbFl6QmhaV1F5TnkxaFpqSm1MVFF6TmpRdFlUQmlNQzFpTUdaa1pEazNNelZpTmpraWZRIn0&response_type=code&client_id=CH-SG-LOGIN-ENCR&redirect_uri=https%3A%2F%2Felogin.sg.ch%2Fauth%2Frealms%2Felogin%2Fbroker%2Fagov-oidc%2Fendpoint&code_challenge=paL2B3kXnA_g6IlQL8aMYbKSPuFhDz-xrqSuZIB-W2w&code_challenge_method=S256&nonce=FbhpFLH5f5rXUPAw7xBt-g&continue",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded",
+        "origin": "https://idp.agov.admin.ch",
+        "referer": "https://idp.agov.admin.ch/adfs/ls?SAMLart=AAQAALb4xNeYkL1QS%2BooBd0RFqzXEJ%2BHa4FLhV4P3tacD6iMmSWU866Yp8g%3D&RelayState=S2-ab896652910a6c2c3ede81ffd1e8b05f-874adcd14cf840fd-52c45690ce6a4376874eee39",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\""
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://elogin.sg.ch/auth/realms/elogin/broker/agov-oidc/endpoint?code=BYGHZacjYXZpgB8X04yelNBXqTmNMGWQoj51xZCVts6PlJULLXlvwLJsJHvIBwfpf1C7GQdBnSZZSpF74HijHSbDd4oYdW_SXJyfDvwoQIOEk7yjLzI7ZHbFurcSS7L9&state=pXEUWsLhndmudxrf41ZQWVYV9gYFKgyJ3su__XYtkxc.hWlWFtOpdsg.hwlQhxT4QW2_TFrLbFUTKA.eyJydSI6Imh0dHBzOi8vZXRheC5zZy5jaC9hdXRoL3JlYWxtcy9lVGF4LVNHL2Jyb2tlci9lTG9naW4tb2lkYy9lbmRwb2ludCIsInJ0IjoiY29kZSIsInN0IjoiRTRNaFAtcXZyQV9WX1RrWG03M040TmdwUjJIUTRxZURzWDlHakV2djVuVS4yaVVYTzZHOHIzOC5ueTB1WDhSNFFRbWpYamMwODItYUdnLmV5SnlkU0k2SW1oMGRIQnpPaTh2WlhSaGVDNXpaeTVqYUM4aUxDSnlkQ0k2SW1OdlpHVWlMQ0p5YlNJNkltWnlZV2R0Wlc1MElpd2ljM1FpT2lKbFl6QmhaV1F5TnkxaFpqSm1MVFF6TmpRdFlUQmlNQzFpTUdaa1pEazNNelZpTmpraWZRIn0",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded",
+        "origin": "https://idp.agov.admin.ch",
+        "referer": "https://idp.agov.admin.ch/",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\""
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://elogin.sg.ch/auth/realms/elogin/login-actions/post-broker-login?client_id=etax&tab_id=hWlWFtOpdsg&client_data=eyJydSI6Imh0dHBzOi8vZXRheC5zZy5jaC9hdXRoL3JlYWxtcy9lVGF4LVNHL2Jyb2tlci9lTG9naW4tb2lkYy9lbmRwb2ludCIsInJ0IjoiY29kZSIsInN0IjoiRTRNaFAtcXZyQV9WX1RrWG03M040TmdwUjJIUTRxZURzWDlHakV2djVuVS4yaVVYTzZHOHIzOC5ueTB1WDhSNFFRbWpYamMwODItYUdnLmV5SnlkU0k2SW1oMGRIQnpPaTh2WlhSaGVDNXpaeTVqYUM4aUxDSnlkQ0k2SW1OdlpHVWlMQ0p5YlNJNkltWnlZV2R0Wlc1MElpd2ljM1FpT2lKbFl6QmhaV1F5TnkxaFpqSm1MVFF6TmpRdFlUQmlNQzFpTUdaa1pEazNNelZpTmpraWZRIn0",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded",
+        "origin": "https://idp.agov.admin.ch",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\""
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://elogin.sg.ch/auth/realms/elogin/broker/after-post-broker-login?session_code=bBR7WGEvYU-wueHi7syrktffI-QqEnzFhJrjBiATvks&client_id=etax&client_data=eyJydSI6Imh0dHBzOi8vZXRheC5zZy5jaC9hdXRoL3JlYWxtcy9lVGF4LVNHL2Jyb2tlci9lTG9naW4tb2lkYy9lbmRwb2ludCIsInJ0IjoiY29kZSIsInN0IjoiRTRNaFAtcXZyQV9WX1RrWG03M040TmdwUjJIUTRxZURzWDlHakV2djVuVS4yaVVYTzZHOHIzOC5ueTB1WDhSNFFRbWpYamMwODItYUdnLmV5SnlkU0k2SW1oMGRIQnpPaTh2WlhSaGVDNXpaeTVqYUM4aUxDSnlkQ0k2SW1OdlpHVWlMQ0p5YlNJNkltWnlZV2R0Wlc1MElpd2ljM1FpT2lKbFl6QmhaV1F5TnkxaFpqSm1MVFF6TmpRdFlUQmlNQzFpTUdaa1pEazNNelZpTmpraWZRIn0&tab_id=hWlWFtOpdsg",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded",
+        "origin": "https://idp.agov.admin.ch",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\""
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://etax.sg.ch/auth/realms/eTax-SG/broker/eLogin-oidc/endpoint?state=E4MhP-qvrA_V_TkXm73N4NgpR2HQ4qeDsX9GjEvv5nU.2iUXO6G8r38.ny0uX8R4QQmjXjc082-aGg.eyJydSI6Imh0dHBzOi8vZXRheC5zZy5jaC8iLCJydCI6ImNvZGUiLCJybSI6ImZyYWdtZW50Iiwic3QiOiJlYzBhZWQyNy1hZjJmLTQzNjQtYTBiMC1iMGZkZDk3MzViNjkifQ&session_state=fd6d2ab2-a6a1-458e-aa92-678fb492343c&iss=https%3A%2F%2Felogin.sg.ch%2Fauth%2Frealms%2Felogin&code=a6378962-654a-451d-9a65-2ae20a21bac1.fd6d2ab2-a6a1-458e-aa92-678fb492343c.87095087-14f8-416d-bf4c-5acb6c551328",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded",
+        "origin": "https://idp.agov.admin.ch",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\""
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://etax.sg.ch/",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded",
+        "origin": "https://idp.agov.admin.ch",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\""
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://etax.sg.ch/assets/index-Dpr4lTsD.js",
+      "headers": {
+        "origin": "https://etax.sg.ch",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://etax.sg.ch/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://etax.sg.ch/config/keycloak.json",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://etax.sg.ch/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "accept": "application/json",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://etax.sg.ch/auth/realms/eTax-SG/protocol/openid-connect/token",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://etax.sg.ch/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "accept": "application/json",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "content-type": "application/x-www-form-urlencoded;charset=UTF-8",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://etax.sg.ch/services/auth/keepalive",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuazlPVEI3TzdvRGxMLTZZWHpNVnhXb2N4MnVqNWNVOERsc3p0eVFNVHBBIn0.eyJleHAiOjE3NzE4NDM4MDAsImlhdCI6MTc3MTg0MzUwMCwiYXV0aF90aW1lIjoxNzcxODQzNTAwLCJqdGkiOiIwOWQ4NzMwMC0yZjQ4LTRlNjItODYxMC1lN2JhOGU4ZmJlZTEiLCJpc3MiOiJodHRwczovL2V0YXguc2cuY2gvYXV0aC9yZWFsbXMvZVRheC1TRyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI2NDVlZGE1Yy02MDNhLTQ4MDMtYjUzMS03ZjViMzliMzRjNGQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJlVGF4LVNHIiwic2lkIjoiYzU5YzhmZTQtZWE2OC00NTA0LTk3OGItMTVhYTU0MThlNjQ0IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL2V0YXguc2cuY2giXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1ldGF4LXNnIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJSaWNoYXJkIFNjaG1pdHotQWJyYWhhbSIsInByZWZlcnJlZF91c2VybmFtZSI6IjVhNzY3NjQxLTU3ZDYtNGM3Yi05NTkzLWE3MDM3MTNmNjNmOCIsImdpdmVuX25hbWUiOiJSaWNoYXJkIiwiZmFtaWx5X25hbWUiOiJTY2htaXR6LUFicmFoYW0iLCJlbWFpbCI6InJpY2hhcmRyb2JpbnNjaG1pdHpAZ21haWwuY29tIn0.VL27SaXvDSo_INyGF3EAMC5OVpCHIBwWMLPwSjXoycow9yD_qQ-nBbjqNEYMqGHEYMtx624inUWTUUqGk7S-5SSC4BstoX-1LTl6amQHdNucIJHM_xcfQJk-s3H0EJ1z6KfnqGzLOZ2QEpkx23zCp4wgdFDoq4HY9ummaV09jsSUdXSY27xNrQ-Y-4JvFN1a5MnuOrPxfrZGFkrBP8gYKpbnxSEyHHZQKBFX-tWX7-Z-Ozk5_UZejusZ0pDkDAUKHjyu-fCBbIaH4Vw7RAcQFdrZOx3udBUEHGGe67BiVfmtiTKrIqcuA349NcaXBgQ5h0PHzQnml4_XpUlRk2nTOQ",
+        "referer": "https://etax.sg.ch/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "accept": "application/json, text/plain, */*",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://etax.sg.ch/config/config.json",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuazlPVEI3TzdvRGxMLTZZWHpNVnhXb2N4MnVqNWNVOERsc3p0eVFNVHBBIn0.eyJleHAiOjE3NzE4NDM4MDAsImlhdCI6MTc3MTg0MzUwMCwiYXV0aF90aW1lIjoxNzcxODQzNTAwLCJqdGkiOiIwOWQ4NzMwMC0yZjQ4LTRlNjItODYxMC1lN2JhOGU4ZmJlZTEiLCJpc3MiOiJodHRwczovL2V0YXguc2cuY2gvYXV0aC9yZWFsbXMvZVRheC1TRyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI2NDVlZGE1Yy02MDNhLTQ4MDMtYjUzMS03ZjViMzliMzRjNGQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJlVGF4LVNHIiwic2lkIjoiYzU5YzhmZTQtZWE2OC00NTA0LTk3OGItMTVhYTU0MThlNjQ0IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL2V0YXguc2cuY2giXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1ldGF4LXNnIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJSaWNoYXJkIFNjaG1pdHotQWJyYWhhbSIsInByZWZlcnJlZF91c2VybmFtZSI6IjVhNzY3NjQxLTU3ZDYtNGM3Yi05NTkzLWE3MDM3MTNmNjNmOCIsImdpdmVuX25hbWUiOiJSaWNoYXJkIiwiZmFtaWx5X25hbWUiOiJTY2htaXR6LUFicmFoYW0iLCJlbWFpbCI6InJpY2hhcmRyb2JpbnNjaG1pdHpAZ21haWwuY29tIn0.VL27SaXvDSo_INyGF3EAMC5OVpCHIBwWMLPwSjXoycow9yD_qQ-nBbjqNEYMqGHEYMtx624inUWTUUqGk7S-5SSC4BstoX-1LTl6amQHdNucIJHM_xcfQJk-s3H0EJ1z6KfnqGzLOZ2QEpkx23zCp4wgdFDoq4HY9ummaV09jsSUdXSY27xNrQ-Y-4JvFN1a5MnuOrPxfrZGFkrBP8gYKpbnxSEyHHZQKBFX-tWX7-Z-Ozk5_UZejusZ0pDkDAUKHjyu-fCBbIaH4Vw7RAcQFdrZOx3udBUEHGGe67BiVfmtiTKrIqcuA349NcaXBgQ5h0PHzQnml4_XpUlRk2nTOQ",
+        "referer": "https://etax.sg.ch/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "accept": "application/json, text/plain, */*",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://etax.sg.ch/config/keycloak.json",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuazlPVEI3TzdvRGxMLTZZWHpNVnhXb2N4MnVqNWNVOERsc3p0eVFNVHBBIn0.eyJleHAiOjE3NzE4NDM4MDAsImlhdCI6MTc3MTg0MzUwMCwiYXV0aF90aW1lIjoxNzcxODQzNTAwLCJqdGkiOiIwOWQ4NzMwMC0yZjQ4LTRlNjItODYxMC1lN2JhOGU4ZmJlZTEiLCJpc3MiOiJodHRwczovL2V0YXguc2cuY2gvYXV0aC9yZWFsbXMvZVRheC1TRyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI2NDVlZGE1Yy02MDNhLTQ4MDMtYjUzMS03ZjViMzliMzRjNGQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJlVGF4LVNHIiwic2lkIjoiYzU5YzhmZTQtZWE2OC00NTA0LTk3OGItMTVhYTU0MThlNjQ0IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL2V0YXguc2cuY2giXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1ldGF4LXNnIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJSaWNoYXJkIFNjaG1pdHotQWJyYWhhbSIsInByZWZlcnJlZF91c2VybmFtZSI6IjVhNzY3NjQxLTU3ZDYtNGM3Yi05NTkzLWE3MDM3MTNmNjNmOCIsImdpdmVuX25hbWUiOiJSaWNoYXJkIiwiZmFtaWx5X25hbWUiOiJTY2htaXR6LUFicmFoYW0iLCJlbWFpbCI6InJpY2hhcmRyb2JpbnNjaG1pdHpAZ21haWwuY29tIn0.VL27SaXvDSo_INyGF3EAMC5OVpCHIBwWMLPwSjXoycow9yD_qQ-nBbjqNEYMqGHEYMtx624inUWTUUqGk7S-5SSC4BstoX-1LTl6amQHdNucIJHM_xcfQJk-s3H0EJ1z6KfnqGzLOZ2QEpkx23zCp4wgdFDoq4HY9ummaV09jsSUdXSY27xNrQ-Y-4JvFN1a5MnuOrPxfrZGFkrBP8gYKpbnxSEyHHZQKBFX-tWX7-Z-Ozk5_UZejusZ0pDkDAUKHjyu-fCBbIaH4Vw7RAcQFdrZOx3udBUEHGGe67BiVfmtiTKrIqcuA349NcaXBgQ5h0PHzQnml4_XpUlRk2nTOQ",
+        "referer": "https://etax.sg.ch/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "accept": "application/json, text/plain, */*",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://etax.sg.ch/delegation/user",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuazlPVEI3TzdvRGxMLTZZWHpNVnhXb2N4MnVqNWNVOERsc3p0eVFNVHBBIn0.eyJleHAiOjE3NzE4NDM4MDAsImlhdCI6MTc3MTg0MzUwMCwiYXV0aF90aW1lIjoxNzcxODQzNTAwLCJqdGkiOiIwOWQ4NzMwMC0yZjQ4LTRlNjItODYxMC1lN2JhOGU4ZmJlZTEiLCJpc3MiOiJodHRwczovL2V0YXguc2cuY2gvYXV0aC9yZWFsbXMvZVRheC1TRyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI2NDVlZGE1Yy02MDNhLTQ4MDMtYjUzMS03ZjViMzliMzRjNGQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJlVGF4LVNHIiwic2lkIjoiYzU5YzhmZTQtZWE2OC00NTA0LTk3OGItMTVhYTU0MThlNjQ0IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL2V0YXguc2cuY2giXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1ldGF4LXNnIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJSaWNoYXJkIFNjaG1pdHotQWJyYWhhbSIsInByZWZlcnJlZF91c2VybmFtZSI6IjVhNzY3NjQxLTU3ZDYtNGM3Yi05NTkzLWE3MDM3MTNmNjNmOCIsImdpdmVuX25hbWUiOiJSaWNoYXJkIiwiZmFtaWx5X25hbWUiOiJTY2htaXR6LUFicmFoYW0iLCJlbWFpbCI6InJpY2hhcmRyb2JpbnNjaG1pdHpAZ21haWwuY29tIn0.VL27SaXvDSo_INyGF3EAMC5OVpCHIBwWMLPwSjXoycow9yD_qQ-nBbjqNEYMqGHEYMtx624inUWTUUqGk7S-5SSC4BstoX-1LTl6amQHdNucIJHM_xcfQJk-s3H0EJ1z6KfnqGzLOZ2QEpkx23zCp4wgdFDoq4HY9ummaV09jsSUdXSY27xNrQ-Y-4JvFN1a5MnuOrPxfrZGFkrBP8gYKpbnxSEyHHZQKBFX-tWX7-Z-Ozk5_UZejusZ0pDkDAUKHjyu-fCBbIaH4Vw7RAcQFdrZOx3udBUEHGGe67BiVfmtiTKrIqcuA349NcaXBgQ5h0PHzQnml4_XpUlRk2nTOQ",
+        "referer": "https://etax.sg.ch/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "accept": "application/json, text/plain, */*",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://etax.sg.ch/services/applicationmessages/search?activeOnly=true",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuazlPVEI3TzdvRGxMLTZZWHpNVnhXb2N4MnVqNWNVOERsc3p0eVFNVHBBIn0.eyJleHAiOjE3NzE4NDM4MDAsImlhdCI6MTc3MTg0MzUwMCwiYXV0aF90aW1lIjoxNzcxODQzNTAwLCJqdGkiOiIwOWQ4NzMwMC0yZjQ4LTRlNjItODYxMC1lN2JhOGU4ZmJlZTEiLCJpc3MiOiJodHRwczovL2V0YXguc2cuY2gvYXV0aC9yZWFsbXMvZVRheC1TRyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI2NDVlZGE1Yy02MDNhLTQ4MDMtYjUzMS03ZjViMzliMzRjNGQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJlVGF4LVNHIiwic2lkIjoiYzU5YzhmZTQtZWE2OC00NTA0LTk3OGItMTVhYTU0MThlNjQ0IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL2V0YXguc2cuY2giXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1ldGF4LXNnIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJSaWNoYXJkIFNjaG1pdHotQWJyYWhhbSIsInByZWZlcnJlZF91c2VybmFtZSI6IjVhNzY3NjQxLTU3ZDYtNGM3Yi05NTkzLWE3MDM3MTNmNjNmOCIsImdpdmVuX25hbWUiOiJSaWNoYXJkIiwiZmFtaWx5X25hbWUiOiJTY2htaXR6LUFicmFoYW0iLCJlbWFpbCI6InJpY2hhcmRyb2JpbnNjaG1pdHpAZ21haWwuY29tIn0.VL27SaXvDSo_INyGF3EAMC5OVpCHIBwWMLPwSjXoycow9yD_qQ-nBbjqNEYMqGHEYMtx624inUWTUUqGk7S-5SSC4BstoX-1LTl6amQHdNucIJHM_xcfQJk-s3H0EJ1z6KfnqGzLOZ2QEpkx23zCp4wgdFDoq4HY9ummaV09jsSUdXSY27xNrQ-Y-4JvFN1a5MnuOrPxfrZGFkrBP8gYKpbnxSEyHHZQKBFX-tWX7-Z-Ozk5_UZejusZ0pDkDAUKHjyu-fCBbIaH4Vw7RAcQFdrZOx3udBUEHGGe67BiVfmtiTKrIqcuA349NcaXBgQ5h0PHzQnml4_XpUlRk2nTOQ",
+        "referer": "https://etax.sg.ch/",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://etax.sg.ch/services/datamodel/search",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuazlPVEI3TzdvRGxMLTZZWHpNVnhXb2N4MnVqNWNVOERsc3p0eVFNVHBBIn0.eyJleHAiOjE3NzE4NDM4MDAsImlhdCI6MTc3MTg0MzUwMCwiYXV0aF90aW1lIjoxNzcxODQzNTAwLCJqdGkiOiIwOWQ4NzMwMC0yZjQ4LTRlNjItODYxMC1lN2JhOGU4ZmJlZTEiLCJpc3MiOiJodHRwczovL2V0YXguc2cuY2gvYXV0aC9yZWFsbXMvZVRheC1TRyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI2NDVlZGE1Yy02MDNhLTQ4MDMtYjUzMS03ZjViMzliMzRjNGQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJlVGF4LVNHIiwic2lkIjoiYzU5YzhmZTQtZWE2OC00NTA0LTk3OGItMTVhYTU0MThlNjQ0IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL2V0YXguc2cuY2giXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1ldGF4LXNnIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJSaWNoYXJkIFNjaG1pdHotQWJyYWhhbSIsInByZWZlcnJlZF91c2VybmFtZSI6IjVhNzY3NjQxLTU3ZDYtNGM3Yi05NTkzLWE3MDM3MTNmNjNmOCIsImdpdmVuX25hbWUiOiJSaWNoYXJkIiwiZmFtaWx5X25hbWUiOiJTY2htaXR6LUFicmFoYW0iLCJlbWFpbCI6InJpY2hhcmRyb2JpbnNjaG1pdHpAZ21haWwuY29tIn0.VL27SaXvDSo_INyGF3EAMC5OVpCHIBwWMLPwSjXoycow9yD_qQ-nBbjqNEYMqGHEYMtx624inUWTUUqGk7S-5SSC4BstoX-1LTl6amQHdNucIJHM_xcfQJk-s3H0EJ1z6KfnqGzLOZ2QEpkx23zCp4wgdFDoq4HY9ummaV09jsSUdXSY27xNrQ-Y-4JvFN1a5MnuOrPxfrZGFkrBP8gYKpbnxSEyHHZQKBFX-tWX7-Z-Ozk5_UZejusZ0pDkDAUKHjyu-fCBbIaH4Vw7RAcQFdrZOx3udBUEHGGe67BiVfmtiTKrIqcuA349NcaXBgQ5h0PHzQnml4_XpUlRk2nTOQ",
+        "referer": "https://etax.sg.ch/",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://etax.sg.ch/services/datamodel/search",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuazlPVEI3TzdvRGxMLTZZWHpNVnhXb2N4MnVqNWNVOERsc3p0eVFNVHBBIn0.eyJleHAiOjE3NzE4NDM4MDAsImlhdCI6MTc3MTg0MzUwMCwiYXV0aF90aW1lIjoxNzcxODQzNTAwLCJqdGkiOiIwOWQ4NzMwMC0yZjQ4LTRlNjItODYxMC1lN2JhOGU4ZmJlZTEiLCJpc3MiOiJodHRwczovL2V0YXguc2cuY2gvYXV0aC9yZWFsbXMvZVRheC1TRyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI2NDVlZGE1Yy02MDNhLTQ4MDMtYjUzMS03ZjViMzliMzRjNGQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJlVGF4LVNHIiwic2lkIjoiYzU5YzhmZTQtZWE2OC00NTA0LTk3OGItMTVhYTU0MThlNjQ0IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL2V0YXguc2cuY2giXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1ldGF4LXNnIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJSaWNoYXJkIFNjaG1pdHotQWJyYWhhbSIsInByZWZlcnJlZF91c2VybmFtZSI6IjVhNzY3NjQxLTU3ZDYtNGM3Yi05NTkzLWE3MDM3MTNmNjNmOCIsImdpdmVuX25hbWUiOiJSaWNoYXJkIiwiZmFtaWx5X25hbWUiOiJTY2htaXR6LUFicmFoYW0iLCJlbWFpbCI6InJpY2hhcmRyb2JpbnNjaG1pdHpAZ21haWwuY29tIn0.VL27SaXvDSo_INyGF3EAMC5OVpCHIBwWMLPwSjXoycow9yD_qQ-nBbjqNEYMqGHEYMtx624inUWTUUqGk7S-5SSC4BstoX-1LTl6amQHdNucIJHM_xcfQJk-s3H0EJ1z6KfnqGzLOZ2QEpkx23zCp4wgdFDoq4HY9ummaV09jsSUdXSY27xNrQ-Y-4JvFN1a5MnuOrPxfrZGFkrBP8gYKpbnxSEyHHZQKBFX-tWX7-Z-Ozk5_UZejusZ0pDkDAUKHjyu-fCBbIaH4Vw7RAcQFdrZOx3udBUEHGGe67BiVfmtiTKrIqcuA349NcaXBgQ5h0PHzQnml4_XpUlRk2nTOQ",
+        "referer": "https://etax.sg.ch/",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://etax.sg.ch/services/datamodel/search",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuazlPVEI3TzdvRGxMLTZZWHpNVnhXb2N4MnVqNWNVOERsc3p0eVFNVHBBIn0.eyJleHAiOjE3NzE4NDM4MDAsImlhdCI6MTc3MTg0MzUwMCwiYXV0aF90aW1lIjoxNzcxODQzNTAwLCJqdGkiOiIwOWQ4NzMwMC0yZjQ4LTRlNjItODYxMC1lN2JhOGU4ZmJlZTEiLCJpc3MiOiJodHRwczovL2V0YXguc2cuY2gvYXV0aC9yZWFsbXMvZVRheC1TRyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI2NDVlZGE1Yy02MDNhLTQ4MDMtYjUzMS03ZjViMzliMzRjNGQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJlVGF4LVNHIiwic2lkIjoiYzU5YzhmZTQtZWE2OC00NTA0LTk3OGItMTVhYTU0MThlNjQ0IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL2V0YXguc2cuY2giXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1ldGF4LXNnIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJSaWNoYXJkIFNjaG1pdHotQWJyYWhhbSIsInByZWZlcnJlZF91c2VybmFtZSI6IjVhNzY3NjQxLTU3ZDYtNGM3Yi05NTkzLWE3MDM3MTNmNjNmOCIsImdpdmVuX25hbWUiOiJSaWNoYXJkIiwiZmFtaWx5X25hbWUiOiJTY2htaXR6LUFicmFoYW0iLCJlbWFpbCI6InJpY2hhcmRyb2JpbnNjaG1pdHpAZ21haWwuY29tIn0.VL27SaXvDSo_INyGF3EAMC5OVpCHIBwWMLPwSjXoycow9yD_qQ-nBbjqNEYMqGHEYMtx624inUWTUUqGk7S-5SSC4BstoX-1LTl6amQHdNucIJHM_xcfQJk-s3H0EJ1z6KfnqGzLOZ2QEpkx23zCp4wgdFDoq4HY9ummaV09jsSUdXSY27xNrQ-Y-4JvFN1a5MnuOrPxfrZGFkrBP8gYKpbnxSEyHHZQKBFX-tWX7-Z-Ozk5_UZejusZ0pDkDAUKHjyu-fCBbIaH4Vw7RAcQFdrZOx3udBUEHGGe67BiVfmtiTKrIqcuA349NcaXBgQ5h0PHzQnml4_XpUlRk2nTOQ",
+        "referer": "https://etax.sg.ch/",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://etax.sg.ch/services/datamodel/search",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuazlPVEI3TzdvRGxMLTZZWHpNVnhXb2N4MnVqNWNVOERsc3p0eVFNVHBBIn0.eyJleHAiOjE3NzE4NDM4MDAsImlhdCI6MTc3MTg0MzUwMCwiYXV0aF90aW1lIjoxNzcxODQzNTAwLCJqdGkiOiIwOWQ4NzMwMC0yZjQ4LTRlNjItODYxMC1lN2JhOGU4ZmJlZTEiLCJpc3MiOiJodHRwczovL2V0YXguc2cuY2gvYXV0aC9yZWFsbXMvZVRheC1TRyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI2NDVlZGE1Yy02MDNhLTQ4MDMtYjUzMS03ZjViMzliMzRjNGQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJlVGF4LVNHIiwic2lkIjoiYzU5YzhmZTQtZWE2OC00NTA0LTk3OGItMTVhYTU0MThlNjQ0IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL2V0YXguc2cuY2giXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1ldGF4LXNnIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJSaWNoYXJkIFNjaG1pdHotQWJyYWhhbSIsInByZWZlcnJlZF91c2VybmFtZSI6IjVhNzY3NjQxLTU3ZDYtNGM3Yi05NTkzLWE3MDM3MTNmNjNmOCIsImdpdmVuX25hbWUiOiJSaWNoYXJkIiwiZmFtaWx5X25hbWUiOiJTY2htaXR6LUFicmFoYW0iLCJlbWFpbCI6InJpY2hhcmRyb2JpbnNjaG1pdHpAZ21haWwuY29tIn0.VL27SaXvDSo_INyGF3EAMC5OVpCHIBwWMLPwSjXoycow9yD_qQ-nBbjqNEYMqGHEYMtx624inUWTUUqGk7S-5SSC4BstoX-1LTl6amQHdNucIJHM_xcfQJk-s3H0EJ1z6KfnqGzLOZ2QEpkx23zCp4wgdFDoq4HY9ummaV09jsSUdXSY27xNrQ-Y-4JvFN1a5MnuOrPxfrZGFkrBP8gYKpbnxSEyHHZQKBFX-tWX7-Z-Ozk5_UZejusZ0pDkDAUKHjyu-fCBbIaH4Vw7RAcQFdrZOx3udBUEHGGe67BiVfmtiTKrIqcuA349NcaXBgQ5h0PHzQnml4_XpUlRk2nTOQ",
+        "referer": "https://etax.sg.ch/",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json"
+      }
+    },
+    {
+      "method": "GET",
+      "url": "https://etax.sg.ch/appinfo/versions.json",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://etax.sg.ch/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"145\", \"Not:A-Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    }
+  ],
+  "apiResponses": [
+    {
+      "url": "https://etax.sg.ch/config/config.json",
+      "status": 200,
+      "body": "{\"accountUrl\":\"https://elogin.sg.ch/settings\",\"appUrl\":\"/\",\"defaultGroupId\":\"ch.np.sg.2025\",\"delegation\":true,\"jpAppUrl\":\"/etax2/doc/\",\"statusMessages\":true,\"supportedGroupIds\":[\"ch.np.sg.2026\",\"ch.np.sg.2025\",\"ch.jp.sg.2026\",\"ch.jp.sg.2025\"]}"
+    },
+    {
+      "url": "https://etax.sg.ch/appinfo/versions.json",
+      "status": 200,
+      "body": "{\"app\": \"1.0.32\", \"backend\": \"1.0.32\", \"print-server\": \"1.0.32\", \"client\": \"1.0.32\", \"thumbnail-server\": \"1.6.1-edge\", \"sr-server\": \"1.5.0-edge\", \"barcode-extraction-utils\": \"1.0.1\"}"
+    }
+  ],
+  "domInfo": [
+    "A#skip-link-content: \"skipLink.pageLayoutMain\"",
+    "A#skip-link-help: \"Navigate to Help page.\"",
+    "BUTTON#menure: \"RS\"",
+    "BUTTON: \"Neue Steuererklärung\"",
+    "BUTTON: \"Frist verlängern\"",
+    "BUTTON: \"\"Neue Steuererklärung\"\"",
+    "A: \"hier\""
+  ],
+  "text": "skipLink.pageLayoutMain\nNavigate to Help page.\nRS\nFallverwaltung\nNeue Steuererklärung\nFrist verlängern\nWillkommen bei E-Tax SG\nStarten Sie mit \"Neue Steuererklärung\" - Vorjahres-Import im nächsten Schritt. Eine Schritt-für-Schritt-Anleitung finden Sie hier."
+}
