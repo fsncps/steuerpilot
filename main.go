@@ -21,6 +21,8 @@ import (
 //go:embed docs/steuerparameter.json
 var steuerparameterData []byte
 
+var version = "dev"
+
 func main() {
 	cfg := config.Load()
 
@@ -78,7 +80,7 @@ func main() {
 
 	app.Get("/ergebnis", h.Ergebnis)
 	app.Get("/health", func(c *fiber.Ctx) error {
-		return c.JSON(fiber.Map{"ok": true})
+		return c.JSON(fiber.Map{"ok": true, "version": version})
 	})
 
 	url := "http://localhost:" + cfg.Port

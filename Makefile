@@ -1,4 +1,7 @@
-.PHONY: tools generate build run test test-calc dev clean
+.PHONY: tools generate build build-windows run test test-calc dev clean
+
+VERSION := $(shell git describe --tags --always --dirty 2>/dev/null || echo "dev")
+LDFLAGS := -ldflags "-X main.version=$(VERSION)"
 
 # Install required dev tools and resolve deps (run once after clone)
 tools:
@@ -12,7 +15,11 @@ generate:
 
 # Full build (generate first)
 build: generate
-	go build -o steuerpilot .
+	go build $(LDFLAGS) -o steuerpilot .
+
+# Cross-compile for Windows AMD64
+build-windows: generate
+	GOOS=windows GOARCH=amd64 go build $(LDFLAGS) -o steuerpilot.exe .
 
 # Run the compiled binary
 run: build
@@ -34,5 +41,5 @@ test-calc:
 # Remove generated files and binary
 clean:
 	find . -name "*_templ.go" -delete
-	rm -f steuerpilot
+	rm -f steuerpilot steuerpilot.exe
 	rm -rf tmp/
