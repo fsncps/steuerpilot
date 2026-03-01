@@ -1,0 +1,12 @@
+[build]
+  cmd = "go build -o ./tmp/steuerpilot ."
+  bin = "./tmp/steuerpilot"
+  exclude_dir = ["static", "docs", "tmp", "templates"]
+  include_ext = ["go"]
+  delay = 500
+
+[log]
+  time = false
+
+[color]
+  app = "cyan"

@@ -1,0 +1,33 @@
+package pages
+
+import (
+	"steuerpilot-go/templates/layout"
+	"steuerpilot-go/templates/partials"
+	"steuerpilot-go/internal/models"
+)
+
+templ Ergebnis(sf models.Steuerfall, ergebnis models.Steuerergebnis) {
+	@layout.Base("Steuerergebnis") {
+		<main class="max-w-2xl mx-auto px-4 py-10">
+			<div class="flex items-center justify-between mb-8">
+				<h1 class="text-2xl font-bold">Ihr Steuerergebnis</h1>
+				<a href="/api/export/pdf" class="text-sm border px-4 py-2 rounded hover:bg-gray-50 transition">
+					PDF exportieren
+				</a>
+			</div>
+			@partials.TaxResult(ergebnis)
+			if len(sf.Optimierungen) > 0 {
+				<div class="mt-8">
+					<h2 class="text-lg font-semibold mb-4">Optimierungsvorschläge</h2>
+					@partials.Optimierungen(sf.Optimierungen)
+				</div>
+			}
+			<div class="mt-10 border-t pt-6 flex justify-between items-center text-sm">
+				<a href="/wizard/zusammenfassung" class="text-gray-500 hover:underline">← Zurück zur Zusammenfassung</a>
+				<form method="POST" action="/api/reset">
+					<button type="submit" class="text-red-500 hover:underline">Neu starten</button>
+				</form>
+			</div>
+		</main>
+	}
+}

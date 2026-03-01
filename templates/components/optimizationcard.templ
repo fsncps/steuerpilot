@@ -1,0 +1,11 @@
+package components
+
+import "steuerpilot-go/internal/models"
+
+// OptimizationCard renders a single optimization suggestion. Currently unused — inlined in optimierungen.templ.
+templ OptimizationCard(opt models.Optimierung) {
+	<div class="border rounded-lg p-4 bg-white shadow-sm">
+		<h4 class="font-semibold text-sm mb-1">{ opt.Titel }</h4>
+		<p class="text-sm text-gray-600">{ opt.Beschreibung }</p>
+	</div>
+}

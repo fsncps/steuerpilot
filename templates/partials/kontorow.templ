@@ -1,0 +1,65 @@
+package partials
+
+import (
+	"fmt"
+	"strconv"
+	"steuerpilot-go/internal/models"
+)
+
+templ KontoList(konten []models.Bankkonto) {
+	if len(konten) == 0 {
+		<p class="text-sm text-gray-400 italic py-2">Keine Konten erfasst.</p>
+	} else {
+		for i, k := range konten {
+			@KontoRow(k, i)
+		}
+	}
+}
+
+templ KontoRow(konto models.Bankkonto, index int) {
+	<div class="border rounded-lg p-3 mb-2 text-sm bg-gray-50">
+		<div class="flex items-center justify-between mb-2">
+			<span class="font-medium text-gray-700">Konto { strconv.Itoa(index + 1) }</span>
+			<button
+				type="button"
+				hx-delete={ "/htmx/wizard/konto/" + strconv.Itoa(index) }
+				hx-target="#konten-list"
+				hx-swap="innerHTML"
+				class="text-red-400 hover:text-red-600 text-xs"
+			>Entfernen</button>
+		</div>
+		<div class="grid grid-cols-3 gap-2">
+			<div>
+				<label class="block text-xs text-gray-500 mb-0.5">Bank</label>
+				<input
+					type="text"
+					name={ "konto_bank_" + strconv.Itoa(index) }
+					value={ konto.Bank }
+					class="w-full border rounded px-2 py-1 text-sm"
+				/>
+			</div>
+			<div>
+				<label class="block text-xs text-gray-500 mb-0.5">Saldo (CHF)</label>
+				<input
+					type="number"
+					name={ "konto_saldo_" + strconv.Itoa(index) }
+					step="0.01"
+					min="0"
+					value={ fmt.Sprintf("%.2f", konto.Saldo) }
+					class="w-full border rounded px-2 py-1 text-sm"
+				/>
+			</div>
+			<div>
+				<label class="block text-xs text-gray-500 mb-0.5">Zinsertrag (CHF)</label>
+				<input
+					type="number"
+					name={ "konto_zins_" + strconv.Itoa(index) }
+					step="0.01"
+					min="0"
+					value={ fmt.Sprintf("%.2f", konto.Zinsertrag) }
+					class="w-full border rounded px-2 py-1 text-sm"
+				/>
+			</div>
+		</div>
+	</div>
+}

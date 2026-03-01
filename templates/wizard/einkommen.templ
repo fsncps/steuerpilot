@@ -1,0 +1,143 @@
+package wizard
+
+import (
+	"fmt"
+	"steuerpilot-go/internal/models"
+	"steuerpilot-go/templates/pages"
+)
+
+templ Einkommen(sf models.Steuerfall) {
+	@pages.WizardLayout("Einkommen", 1) {
+		<form method="POST" action="/wizard/einkommen/submit" class="space-y-6">
+			<fieldset class="border rounded-lg p-4">
+				<legend class="text-sm font-semibold px-1 text-gray-700">Haupterwerb</legend>
+				<div class="space-y-3 mt-2">
+					<div>
+						<label class="block text-sm font-medium mb-1">Arbeitgeber</label>
+						<input
+							type="text"
+							name="haupt_arbeitgeber"
+							value={ sf.Einkommen.Haupterwerb.Arbeitgeber }
+							class="w-full border rounded px-3 py-2 text-sm"
+						/>
+					</div>
+					<div class="grid grid-cols-2 gap-3">
+						<div>
+							<label class="block text-sm font-medium mb-1">Bruttolohn (CHF)</label>
+							<input
+								type="number"
+								name="haupt_bruttolohn"
+								step="0.01"
+								min="0"
+								value={ fmt.Sprintf("%.2f", sf.Einkommen.Haupterwerb.Bruttolohn) }
+								class="w-full border rounded px-3 py-2 text-sm"
+							/>
+						</div>
+						<div>
+							<label class="block text-sm font-medium mb-1">Nettolohn (CHF)</label>
+							<input
+								type="number"
+								name="haupt_nettolohn"
+								step="0.01"
+								min="0"
+								value={ fmt.Sprintf("%.2f", sf.Einkommen.Haupterwerb.Nettolohn) }
+								class="w-full border rounded px-3 py-2 text-sm"
+							/>
+						</div>
+						<div>
+							<label class="block text-sm font-medium mb-1">AHV/IV/EO/ALV (CHF)</label>
+							<input
+								type="number"
+								name="haupt_ahv"
+								step="0.01"
+								min="0"
+								value={ fmt.Sprintf("%.2f", sf.Einkommen.Haupterwerb.AhvIvEoAlvNbuv) }
+								class="w-full border rounded px-3 py-2 text-sm"
+							/>
+						</div>
+						<div>
+							<label class="block text-sm font-medium mb-1">BVG ordentlich (CHF)</label>
+							<input
+								type="number"
+								name="haupt_bvg"
+								step="0.01"
+								min="0"
+								value={ fmt.Sprintf("%.2f", sf.Einkommen.Haupterwerb.BvgOrdentlich) }
+								class="w-full border rounded px-3 py-2 text-sm"
+							/>
+						</div>
+					</div>
+					<div class="flex flex-wrap gap-4">
+						<label class="flex items-center gap-2 text-sm cursor-pointer">
+							<input type="checkbox" name="haupt_hatGA" value="1" checked?={ sf.Einkommen.Haupterwerb.HatGA }/>
+							GA / Halbtax (AG bezahlt)
+						</label>
+						<label class="flex items-center gap-2 text-sm cursor-pointer">
+							<input type="checkbox" name="haupt_hatKantine" value="1" checked?={ sf.Einkommen.Haupterwerb.HatKantine }/>
+							Kantine
+						</label>
+						<label class="flex items-center gap-2 text-sm cursor-pointer">
+							<input type="checkbox" name="haupt_hatGeschaeftsauto" value="1" checked?={ sf.Einkommen.Haupterwerb.HatGeschaeftsauto }/>
+							Geschäftsauto
+						</label>
+					</div>
+				</div>
+			</fieldset>
+			<fieldset class="border rounded-lg p-4">
+				<legend class="text-sm font-semibold px-1 text-gray-700">Kapitalerträge &amp; übrige Einkünfte</legend>
+				<div class="grid grid-cols-2 gap-3 mt-2">
+					<div>
+						<label class="block text-sm font-medium mb-1">Wertschriftenerträge (CHF)</label>
+						<input
+							type="number"
+							name="wertschriften_ertraege"
+							step="0.01"
+							min="0"
+							value={ fmt.Sprintf("%.2f", sf.Einkommen.WertschriftenErtraege) }
+							class="w-full border rounded px-3 py-2 text-sm"
+						/>
+					</div>
+					<div>
+						<label class="block text-sm font-medium mb-1">Bankzinsen (CHF)</label>
+						<input
+							type="number"
+							name="bankzinsen"
+							step="0.01"
+							min="0"
+							value={ fmt.Sprintf("%.2f", sf.Einkommen.Bankzinsen) }
+							class="w-full border rounded px-3 py-2 text-sm"
+						/>
+					</div>
+					<div>
+						<label class="block text-sm font-medium mb-1">Renten (CHF)</label>
+						<input
+							type="number"
+							name="renten"
+							step="0.01"
+							min="0"
+							value={ fmt.Sprintf("%.2f", sf.Einkommen.Renten) }
+							class="w-full border rounded px-3 py-2 text-sm"
+						/>
+					</div>
+					<div>
+						<label class="block text-sm font-medium mb-1">Übrige Einkünfte (CHF)</label>
+						<input
+							type="number"
+							name="uebrige_einkuenfte"
+							step="0.01"
+							min="0"
+							value={ fmt.Sprintf("%.2f", sf.Einkommen.UebrigeEinkuenfte) }
+							class="w-full border rounded px-3 py-2 text-sm"
+						/>
+					</div>
+				</div>
+			</fieldset>
+			<div class="flex justify-between pt-2 border-t">
+				<a href="/wizard/personalien" class="text-gray-500 hover:underline text-sm">← Zurück</a>
+				<button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded font-medium hover:bg-blue-700 transition">
+					Weiter →
+				</button>
+			</div>
+		</form>
+	}
+}

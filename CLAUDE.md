@@ -6,72 +6,38 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Projektübersicht
 
-**SteuerPilot SG** – KI-gestützte Web-App zur Vorbereitung der Steuererklärung für Privatpersonen im Kanton St. Gallen. Claude Vision wird für Dokumenten-Extraktion (Lohnausweis, Kontoauszug, Säule 3a) verwendet; die Steuerberechnung selbst läuft **immer lokal**.
+**SteuerPilot SG** – KI-gestützte Web-App zur Vorbereitung der Steuererklärung für Privatpersonen im Kanton St. Gallen. Claude Vision wird für Dokumenten-Extraktion verwendet; die Steuerberechnung läuft **immer lokal**.
 
-**MVP-Zielgruppe:** Unselbständig erwerbstätige natürliche Personen im Kanton SG (keine Liegenschaften, keine Selbständigkeit).
+**MVP-Zielgruppe:** Unselbständig erwerbstätige natürliche Personen im Kanton SG.
 
-**Sprache:** Deutsch (Schweizer Hochdeutsch – kein ß, CHF statt €, Apostroph als Tausendertrenner: `CHF 1'234.56`).
-
----
-
-## Repository-Struktur
-
-```
-steuern/
-├── CLAUDE.md                  # Diese Datei
-├── setup.sh                   # Einmalig: Next.js-Projekt aufsetzen
-├── src-lib-*.ts               # Entwurfsdateien (NICHT Teil der App)
-├── src-store-taxStore.ts      # Entwurfsdatei (NICHT Teil der App)
-├── steuer-app-recherche.md    # Steuer-Recherche-Notizen
-├── tarif2025.{pdf,txt}        # Offizielle SG-Tarifdokumente
-├── wegleitung2025.pdf         # Wegleitung Steuererklärung
-└── steuerpilot-sg-bu/         # ← HIER LEBT DIE APP (Next.js)
-    ├── src/
-    │   ├── app/               # Next.js App Router
-    │   │   ├── api/extract/   # POST: Dokument → Claude Vision → typisiertes JSON
-    │   │   ├── api/optimize/  # POST: Steuerfall → Optimierungsvorschläge
-    │   │   ├── upload/        # Upload-Seite
-    │   │   ├── wizard/        # Wizard-Seite + steps/ (5 Steps)
-    │   │   └── ergebnis/      # Ergebnisseite
-    │   ├── components/        # React-Komponenten (layout/, results/, upload/, wizard/, ui/)
-    │   ├── lib/               # Business-Logik
-    │   │   ├── tax/           # Steuerberechnung (calculator, types, parameters)
-    │   │   ├── extraction/    # Claude Vision Parsing (noch nicht angelegt)
-    │   │   ├── export/        # PDF-Export (pdf.tsx)
-    │   │   └── anthropic.ts   # Anthropic API Client
-    │   └── store/taxStore.ts  # Zustand Store (globaler App-State)
-    ├── docs/
-    │   └── steuerparameter.json  # Tarife, Steuerfüsse, Abzugsparameter (Source of Truth)
-    ├── scripts/               # Playwright-basierte ETax-API-Analyse (nicht Teil der App)
-    └── db/                    # (leer; für künftige SQLite-Nutzung reserviert)
-```
+**Sprache:** Deutsch (Schweizer Hochdeutsch – kein ß, CHF statt €, `CHF 1'234.56`).
 
 ---
 
 ## Entwicklungs-Befehle
 
-Alle Befehle müssen in `steuerpilot-sg-bu/` ausgeführt werden:
+Alle Befehle in `src/` ausführen:
 
 ```bash
-cd steuerpilot-sg-bu
+cd src
 
-npm run dev        # Dev-Server starten (http://localhost:3000)
-npm run build      # Produktions-Build
-npm run lint       # ESLint
-npm test           # Alle Tests (Jest)
-npm run test:watch # Tests im Watch-Modus
+make tools       # Einmalig: templ + air installieren, go mod tidy
+make dev         # Dev: templ watch + air hot-reload (parallel)
+make build       # templ generate + go build → ./steuerpilot
+make run         # build + ausführen
+make test        # alle Tests (requires generate)
+make test-calc   # nur tax/calculator Tests, schnell, kein Netzwerk
+make generate    # nur templ kompilieren
+make clean       # generierte Dateien + Binary entfernen
 ```
 
-**Einzelnen Test ausführen:**
-```bash
-npm test -- --testPathPattern="calculator"
+**Umgebungsvariablen:** `src/.env` (aus `src/.env.example`):
 ```
-
-**Umgebungsvariablen:** `.env.local` in `steuerpilot-sg-bu/` anlegen:
-```
-ANTHROPIC_API_KEY=sk-ant-xxxxx
-NEXT_PUBLIC_APP_NAME=SteuerPilot SG
-NEXT_PUBLIC_STEUERPERIODE=2024
+ANTHROPIC_API_KEY=sk-ant-xxxxx   # required
+SESSION_SECRET=                  # required in production (openssl rand -base64 32)
+PORT=3000
+ENV=development
+STEUERPARAMETER_PATH=./docs/steuerparameter.json
 ```
 
 ---
@@ -80,87 +46,108 @@ NEXT_PUBLIC_STEUERPERIODE=2024
 
 | Komponente | Technologie |
 |---|---|
-| Framework | Next.js 16 (App Router) |
-| Sprache | TypeScript (strict) |
-| Styling | Tailwind CSS v4 |
-| UI-Komponenten | shadcn/ui (radix-ui) |
-| State | Zustand v5 |
-| Formulare | react-hook-form + zod |
-| KI | @anthropic-ai/sdk (Claude Sonnet) |
-| PDF | @react-pdf/renderer |
-| Tests | Jest + ts-jest |
+| Framework | Go 1.23 + Fiber v2 |
+| Templates | a-h/templ (compiled, type-safe) |
+| State | Server-side Sessions (Fiber session, in-memory) |
+| KI | anthropic-sdk-go (Claude Sonnet) |
+| PDF | export/pdf.go (`internal/export`) |
+| Tests | Go test + testify |
+| Dev | air (hot reload) + templ --watch |
 
-**Aktives Modell:** `claude-sonnet-4-5-20250929` (in `src/lib/anthropic.ts`)
+---
+
+## Repository-Struktur
+
+```
+steuerpilot/
+├── CLAUDE.md
+├── data/
+│   ├── steuerparameter.json    # Tarife/Abzugslimits (Referenz)
+│   ├── drafts/                 # alte TypeScript-Entwürfe (nicht Teil der App)
+│   └── etax/                   # eTax-API-Analyse (Referenz)
+└── src/                        # ← HIER LEBT DIE APP
+    ├── main.go                 # Entry point, alle Routen
+    ├── Makefile
+    ├── go.mod / go.sum
+    ├── config/config.go        # Config struct + env loading
+    ├── middleware/session.go   # Session-Store-Middleware
+    ├── handlers/
+    │   ├── pages.go            # Landing, Upload, Ergebnis
+    │   ├── wizard.go           # WizardStep, WizardSubmit, WizardBack
+    │   ├── htmx.go             # HTMX-Partials (Kind, Konto, TaxCalculate)
+    │   └── api.go              # /api/upload, /api/optimize, /api/export/pdf
+    ├── internal/
+    │   ├── models/
+    │   │   ├── steuerfall.go   # Steuerfall, Personalien, Einkommen, Abzuege, Vermoegen, Steuerergebnis
+    │   │   ├── parameter.go    # SteuerparameterDB
+    │   │   └── extraktion.go   # Extractions-Modelle für Claude Vision
+    │   ├── tax/
+    │   │   ├── calculator.go   # BerechneSteuern() – reine Funktion
+    │   │   ├── parameters.go   # LoadSteuerparameter(), GetGemeinden()
+    │   │   └── calculator_test.go
+    │   ├── claude/
+    │   │   ├── client.go       # Init(apiKey), globaler Anthropic-Client
+    │   │   ├── extract.go      # ExtractDocument() – Vision OCR
+    │   │   └── optimize.go     # GetOptimierungen()
+    │   ├── session/session.go  # GetSteuerfall/SaveSteuerfall etc. (Fiber ctx)
+    │   ├── export/pdf.go       # PDF-Generierung
+    │   └── util/format.go      # FormatCHF(), FormatCHFRund()
+    ├── templates/              # .templ Quelldateien + *_templ.go (generiert)
+    │   ├── layout/             # base.templ, header.templ, footer.templ
+    │   ├── pages/              # landing, upload, wizard, ergebnis
+    │   ├── wizard/             # personalien, einkommen, abzuege, vermoegen, zusammenfassung
+    │   ├── components/         # dropzone, formfield, stepindicator, etc.
+    │   └── partials/           # HTMX-Partials (kindrow, kontorow, taxresult, etc.)
+    ├── docs/
+    │   ├── steuerparameter.json  # Source of Truth für alle Tarife (in App geladen)
+    │   └── SPEC.md             # Fachliche Spezifikation
+    └── static/                 # Statische Assets
+```
 
 ---
 
 ## Architektur-Kernpunkte
 
+### Routing & Handlers (`main.go`, `handlers/`)
+- Fiber v2, alle Routen in `main.go`
+- Wizard-Steps via `/wizard/:step` (GET render, POST submit, GET back)
+- HTMX-Endpunkte unter `/htmx/...` für dynamische Partials
+- `handlers.New(cfg, params)` – Handler hält Config und geladene Steuerparameter
+
 ### Steuerparameter
-Alle Tarife und Abzugslimits kommen aus `docs/steuerparameter.json`. Laden via `src/lib/tax/parameters.ts` (`getSteuerparameter()`, `getAlleGemeinden()`). Gemeindesteuerfüsse und Kirchensteuerfüsse sind dort konfiguriert – **niemals hardcoden**.
+Source of Truth: `src/docs/steuerparameter.json`. Geladen einmalig beim Start via `tax.LoadSteuerparameter()`. Gemeindesteuerfüsse, Kirchensteuerfüsse, Tarife – **niemals hardcoden**.
 
-### Berechnungsflow (`src/lib/tax/calculator.ts`)
-`berechneSteuern(steuerfall, parameter)` → `Steuerergebnis`
-1. Gesamteinkommen (Bruttolöhne + Kapitalerträge + übrige Einkünfte)
-2. Abzüge separat für Kanton und Bund (abweichende Limits, z.B. Fahrkosten: Kanton 4'595, Bund 3'000)
-3. Einfache Steuer via progressivem Tarif, mit Splitting für Verheiratete (Satz auf ½ Einkommen, dann × 2)
-4. Kantonssteuer = Einfache Steuer × Steuerfuss%; Gemeindesteuer, Kirchensteuer analog
-5. Vermögenssteuer linear (1.7‰ auf steuerbares Vermögen nach Freibetrag)
-6. Bundessteuer separat (eigener Tarif + eigene Abzugslimits)
+### Steuerberechnung (`internal/tax/calculator.go`)
+`BerechneSteuern(steuerfall, parameter)` → `Steuerergebnis` – reine Funktion ohne Seiteneffekte.
+Ablauf: Einkommen → Abzüge Kanton → Abzüge Bund → Vermögen → Einfache Steuer → Kantons-/Gemeinde-/Kirchensteuer → Bundessteuer → Vermögenssteuer.
+Splitting (halbes Einkommen, Satz × 2) für Verheiratete und Geschiedene mit Kindern.
 
-### Anthropic API (`src/lib/anthropic.ts`)
-- `extractDocument(base64, mediaType, type)` – Vision-Extraktion, gibt typisiertes JSON zurück
-- `getOptimierungen(steuerfall)` – Optimierungsvorschläge als `Optimierung[]`
-- Alle API-Calls **serverseitig** (API Routes) – `ANTHROPIC_API_KEY` nie im Frontend
+### Session-State (`internal/session/session.go`)
+Gesamter Wizard-State (Steuerfall, CurrentStep, ExtractionResult) in Server-seitiger Fiber-Session. Zugriff über `session.GetSteuerfall(c)` / `session.SaveSteuerfall(c, sf)` etc. Kein Client-State.
 
-### Zustand Store (`src/store/taxStore.ts`)
-Wizard-Steps: `upload → personalien → einkommen → abzuege → vermoegen → zusammenfassung`
-Zugriff via `useTaxStore()`. `getSteuerfall()` baut den vollständigen `Steuerfall`-Objekt zusammen.
+### Templates (`templates/`)
+`.templ`-Dateien müssen vor dem Build mit `templ generate` kompiliert werden → `*_templ.go`. Die generierten Dateien werden committet. `make dev` übernimmt das im Watch-Modus.
 
-### Beträge
-Alle Berechnungen intern in **CHF** (nicht Rappen), Rundung auf 1 Franken am Ende via `Math.round()`. Anzeige via `formatCHF()` / `formatCHFRund()` aus `calculator.ts`.
+### Claude Integration (`internal/claude/`)
+- `claude.Init(apiKey)` beim Start, globaler Client
+- `ExtractDocument()` – Vision OCR, gibt typisiertes Extraktions-JSON zurück
+- `GetOptimierungen()` – gibt `[]Optimierung` zurück
+- Alle API-Calls nur serverseitig
 
 ---
 
 ## Bekannte TODOs / offene Punkte
 
-- **Kinderabzug auf Steuerbetrag** (SG-spezifisch): Reduktion des Rechnungsbetrags pro Kind ist noch nicht implementiert (`calculator.ts`, Zeile ~71)
-- **Bundessteuer Verheirateten-Tarif**: Aktuell als Approximation (`alleinstehend × 0.85`). Muss durch echten dBSt-Verheirateten-Tarif ersetzt werden (`calculator.ts`, Zeile ~349)
-- **API Routes**: `/api/calculate` und `/api/export` noch nicht implementiert (vorhanden: `/api/extract`, `/api/optimize`)
-- **Dokumenten-Extraktion**: `src/lib/extraction/` (lohnausweis.ts, bankstatement.ts, pillar3a.ts) noch nicht angelegt
+- **Kinderabzug auf Steuerbetrag** (SG-spezifisch): Reduktion des Rechnungsbetrags pro Kind fehlt noch (`calculator.go` TODO-Kommentar)
+- **Bundessteuer Verheirateten-Tarif**: Approximation (`alleinstehend × 0.85`), echter dBSt-Tarif ausstehend
+- **PDF-Export** (`/api/export/pdf`): Implementierung prüfen
 
 ---
 
-## Kritische Entwicklungsregeln
+## Kritische Regeln
 
-1. **Steuerberechnung IMMER lokal** – Claude nur für OCR und Optimierungstext
-2. **Jeder Abzug gegen sein Maximum validieren** – keine ungeprüften Werte durchlassen
-3. **Bundessteuer separat berechnen** – eigener Tarif, eigene Limiten
-4. **Kein Dokument dauerhaft speichern** – nach Extraktion sofort aus Speicher entfernen
-5. **Splitting korrekt**: Satz auf halbes Einkommen berechnen, dann auf das ganze Einkommen anwenden
-
----
-
-## User Flow
-
-```
-Landing → Upload (Lohnausweis Pflicht, 3a/Konto optional)
-→ Extraktion & Prüfung (Claude Vision, User korrigiert)
-→ Wizard (5 Steps: Personalien, Einkommen, Abzüge, Vermögen, Zusammenfassung)
-→ Ergebnis (Steuerberechnung, Optimierungsvorschläge, PDF-Export)
-```
-
----
-
-## Rechtlicher Disclaimer (muss prominent angezeigt werden)
-
-```
-SteuerPilot SG ist ein Hilfstool zur Vorbereitung Ihrer Steuererklärung.
-Die App ersetzt keine professionelle Steuerberatung und stellt keine
-rechtsverbindliche Steuerberatung dar. Die Verantwortung für die
-Richtigkeit der eingereichten Steuererklärung liegt ausschliesslich
-bei der steuerpflichtigen Person. Für die definitive Einreichung
-verwenden Sie bitte das offizielle E-Tax SG Portal des Kantons
-St. Gallen. Alle hochgeladenen Dokumente werden verschlüsselt
-übertragen und nach der Verarbeitung nicht dauerhaft gespeichert.
-```
+1. **Steuerberechnung IMMER lokal** – Claude nur für OCR + Optimierungstext
+2. **Jeden Abzug gegen sein Maximum validieren** – in `calculator.go`
+3. **Bundessteuer separat** – eigener Tarif, eigene Limits
+4. **Kein Dokument dauerhaft speichern** – nach Extraktion sofort verwerfen
+5. **`*_templ.go` nie manuell bearbeiten** – werden von `templ generate` überschrieben

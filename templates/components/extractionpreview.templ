@@ -1,0 +1,41 @@
+package components
+
+templ ExtractionPreview(docType, errMsg string, fields [][2]string) {
+	if errMsg != "" {
+		<div class="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700">
+			<p class="font-semibold mb-1">Extraktion fehlgeschlagen</p>
+			<p class="text-sm">{ errMsg }</p>
+		</div>
+	} else {
+		<div class="bg-white border rounded-lg p-6 shadow-sm">
+			<h3 class="font-semibold text-base mb-4">Extrahierte Daten ({ docType })</h3>
+			if len(fields) > 0 {
+				<dl class="space-y-2 mb-5">
+					for _, f := range fields {
+						<div class="flex justify-between text-sm">
+							<dt class="text-gray-500">{ f[0] }</dt>
+							<dd class="font-medium">{ f[1] }</dd>
+						</div>
+					}
+				</dl>
+			}
+			<div class="flex gap-3">
+				<form method="POST" action="/api/extraction/accept">
+					<button
+						type="submit"
+						class="bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition"
+					>
+						Daten übernehmen
+					</button>
+				</form>
+				<button
+					type="button"
+					onclick="document.getElementById('upload-form').reset(); document.getElementById('extraction-result').innerHTML = '';"
+					class="text-gray-600 px-4 py-2 text-sm hover:underline"
+				>
+					Anderes Dokument hochladen
+				</button>
+			</div>
+		</div>
+	}
+}

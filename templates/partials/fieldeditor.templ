@@ -1,0 +1,9 @@
+package partials
+
+// FieldEditor renders an editable field for inline correction of extracted values. Currently unused.
+templ FieldEditor(label, name, value string) {
+	<div class="flex items-center gap-2 text-sm">
+		<label class="text-gray-500 w-40 shrink-0">{ label }</label>
+		<input type="text" name={ name } value={ value } class="border rounded px-2 py-1 text-sm flex-1"/>
+	</div>
+}
