@@ -3,6 +3,9 @@ package main
 import (
 	_ "embed"
 	"log"
+	"os/exec"
+	"runtime"
+	"time"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/logger"
@@ -78,6 +81,24 @@ func main() {
 		return c.JSON(fiber.Map{"ok": true})
 	})
 
-	log.Printf("SteuerPilot SG läuft auf :%s", cfg.Port)
+	url := "http://localhost:" + cfg.Port
+	go func() {
+		time.Sleep(600 * time.Millisecond)
+		openBrowser(url)
+	}()
+	log.Printf("SteuerPilot SG läuft auf %s", url)
 	log.Fatal(app.Listen(":" + cfg.Port))
+}
+
+func openBrowser(url string) {
+	var cmd *exec.Cmd
+	switch runtime.GOOS {
+	case "windows":
+		cmd = exec.Command("cmd", "/c", "start", url)
+	case "darwin":
+		cmd = exec.Command("open", url)
+	default:
+		cmd = exec.Command("xdg-open", url)
+	}
+	_ = cmd.Start()
 }
