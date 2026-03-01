@@ -5,10 +5,10 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 
-	"steuerpilot-go/internal/models"
-	"steuerpilot-go/internal/session"
-	"steuerpilot-go/internal/tax"
-	"steuerpilot-go/templates/wizard"
+	"steuerpilot/internal/models"
+	"steuerpilot/internal/session"
+	"steuerpilot/internal/tax"
+	"steuerpilot/templates/wizard"
 )
 
 var wizardSteps = []string{"personalien", "einkommen", "abzuege", "vermoegen", "zusammenfassung"}

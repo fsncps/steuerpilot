@@ -8,7 +8,7 @@ package components
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-import "steuerpilot-go/internal/models"
+import "steuerpilot/internal/models"
 
 // DeductionBreakdown renders an itemised deduction list. Currently unused — inlined in taxresult.templ.
 func DeductionBreakdown(abzuege models.Abzuege) templ.Component {

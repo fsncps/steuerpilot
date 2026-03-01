@@ -44,7 +44,7 @@ func ExtractDocument(apiKey, mimeType, base64Data, docType string) ([]byte, erro
 				Role: anthropic.MessageParamRoleUser,
 				Content: []anthropic.ContentBlockParamUnion{
 					mediaBlock,
-					{OfRequestTextBlock: &anthropic.TextBlockParam{Text: prompt(docType)}},
+					{OfText: &anthropic.TextBlockParam{Text: prompt(docType)}},
 				},
 			},
 		},

@@ -3,7 +3,7 @@ package tax
 import (
 	"math"
 
-	"steuerpilot-go/internal/models"
+	"steuerpilot/internal/models"
 )
 
 // BerechneSteuern is the core pure function: Steuerfall → Steuerergebnis.

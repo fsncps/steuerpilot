@@ -9,8 +9,8 @@ import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
 import (
-	"steuerpilot-go/templates/components"
-	"steuerpilot-go/templates/layout"
+	"steuerpilot/templates/components"
+	"steuerpilot/templates/layout"
 )
 
 func WizardLayout(title string, stepIndex int) templ.Component {

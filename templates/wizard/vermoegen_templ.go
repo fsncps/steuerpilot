@@ -10,9 +10,9 @@ import templruntime "github.com/a-h/templ/runtime"
 
 import (
 	"fmt"
-	"steuerpilot-go/internal/models"
-	"steuerpilot-go/templates/pages"
-	"steuerpilot-go/templates/partials"
+	"steuerpilot/internal/models"
+	"steuerpilot/templates/pages"
+	"steuerpilot/templates/partials"
 )
 
 func Vermoegen(sf models.Steuerfall) templ.Component {

@@ -5,10 +5,10 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 
-	"steuerpilot-go/internal/models"
-	"steuerpilot-go/internal/session"
-	"steuerpilot-go/internal/tax"
-	"steuerpilot-go/templates/partials"
+	"steuerpilot/internal/models"
+	"steuerpilot/internal/session"
+	"steuerpilot/internal/tax"
+	"steuerpilot/templates/partials"
 )
 
 // ExtractionPreview delegates to HandleUpload — used for HTMX-based preview before accepting.

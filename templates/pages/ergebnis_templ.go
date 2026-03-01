@@ -9,9 +9,9 @@ import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
 import (
-	"steuerpilot-go/internal/models"
-	"steuerpilot-go/templates/layout"
-	"steuerpilot-go/templates/partials"
+	"steuerpilot/internal/models"
+	"steuerpilot/templates/layout"
+	"steuerpilot/templates/partials"
 )
 
 func Ergebnis(sf models.Steuerfall, ergebnis models.Steuerergebnis) templ.Component {

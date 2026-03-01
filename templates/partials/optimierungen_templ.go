@@ -9,8 +9,8 @@ import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
 import (
-	"steuerpilot-go/internal/models"
-	"steuerpilot-go/internal/util"
+	"steuerpilot/internal/models"
+	"steuerpilot/internal/util"
 )
 
 func Optimierungen(opts []models.Optimierung) templ.Component {

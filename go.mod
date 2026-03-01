@@ -1,4 +1,4 @@
-module steuerpilot-go
+module steuerpilot
 
 go 1.23
 

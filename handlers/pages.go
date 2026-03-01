@@ -3,9 +3,9 @@ package handlers
 import (
 	"github.com/gofiber/fiber/v2"
 
-	"steuerpilot-go/internal/session"
-	"steuerpilot-go/internal/tax"
-	"steuerpilot-go/templates/pages"
+	"steuerpilot/internal/session"
+	"steuerpilot/internal/tax"
+	"steuerpilot/templates/pages"
 )
 
 func (h *Handler) Landing(c *fiber.Ctx) error {

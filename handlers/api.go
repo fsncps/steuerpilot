@@ -9,12 +9,12 @@ import (
 	"github.com/a-h/templ"
 	"github.com/gofiber/fiber/v2"
 
-	"steuerpilot-go/config"
-	"steuerpilot-go/internal/claude"
-	"steuerpilot-go/internal/models"
-	"steuerpilot-go/internal/session"
-	"steuerpilot-go/templates/components"
-	"steuerpilot-go/templates/partials"
+	"steuerpilot/config"
+	"steuerpilot/internal/claude"
+	"steuerpilot/internal/models"
+	"steuerpilot/internal/session"
+	"steuerpilot/templates/components"
+	"steuerpilot/templates/partials"
 )
 
 // Handler is the top-level handler struct, shared across all handler files.

@@ -6,7 +6,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/session"
 
-	"steuerpilot-go/internal/models"
+	"steuerpilot/internal/models"
 )
 
 const (

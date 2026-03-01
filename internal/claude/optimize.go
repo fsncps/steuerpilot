@@ -3,7 +3,7 @@ package claude
 import (
 	"fmt"
 
-	"steuerpilot-go/internal/models"
+	"steuerpilot/internal/models"
 )
 
 // GetOptimierungen sends the Steuerfall to Claude and returns optimisation suggestions.

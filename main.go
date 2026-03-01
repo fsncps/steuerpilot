@@ -7,11 +7,11 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/gofiber/fiber/v2/middleware/recover"
 
-	"steuerpilot-go/config"
-	"steuerpilot-go/handlers"
-	"steuerpilot-go/internal/claude"
-	"steuerpilot-go/internal/tax"
-	appmiddleware "steuerpilot-go/middleware"
+	"steuerpilot/config"
+	"steuerpilot/handlers"
+	"steuerpilot/internal/claude"
+	"steuerpilot/internal/tax"
+	appmiddleware "steuerpilot/middleware"
 )
 
 func main() {

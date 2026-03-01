@@ -5,7 +5,7 @@ import (
 	"os"
 	"sort"
 
-	"steuerpilot-go/internal/models"
+	"steuerpilot/internal/models"
 )
 
 // LoadSteuerparameter reads and parses docs/steuerparameter.json.

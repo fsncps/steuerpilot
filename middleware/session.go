@@ -7,7 +7,7 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/session"
 	"github.com/gofiber/storage/memory"
 
-	"steuerpilot-go/config"
+	"steuerpilot/config"
 )
 
 var store *session.Store

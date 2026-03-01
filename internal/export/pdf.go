@@ -1,6 +1,6 @@
 package export
 
-import "steuerpilot-go/internal/models"
+import "steuerpilot/internal/models"
 
 // GeneratePDF renders a PDF summary of the tax case and returns the bytes.
 // Uses github.com/go-pdf/fpdf — NOT github.com/jung-kurt/gofpdf (archived).

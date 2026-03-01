@@ -8,7 +8,7 @@ package components
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-import "steuerpilot-go/internal/models"
+import "steuerpilot/internal/models"
 
 // OptimizationCard renders a single optimization suggestion. Currently unused — inlined in optimierungen.templ.
 func OptimizationCard(opt models.Optimierung) templ.Component {

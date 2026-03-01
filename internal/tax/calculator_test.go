@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"steuerpilot-go/internal/models"
+	"steuerpilot/internal/models"
 )
 
 func basisSteuerfall() models.Steuerfall {

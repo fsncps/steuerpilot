@@ -9,9 +9,9 @@ import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
 import (
-	"steuerpilot-go/internal/models"
-	"steuerpilot-go/templates/pages"
-	"steuerpilot-go/templates/partials"
+	"steuerpilot/internal/models"
+	"steuerpilot/templates/pages"
+	"steuerpilot/templates/partials"
 )
 
 func Personalien(sf models.Steuerfall, gemeinden []string) templ.Component {

@@ -10,8 +10,8 @@ import templruntime "github.com/a-h/templ/runtime"
 
 import (
 	"fmt"
-	"steuerpilot-go/internal/models"
-	"steuerpilot-go/templates/pages"
+	"steuerpilot/internal/models"
+	"steuerpilot/templates/pages"
 )
 
 func Einkommen(sf models.Steuerfall) templ.Component {
