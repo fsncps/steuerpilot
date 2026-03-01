@@ -1,0 +1,8 @@
+steuerpilot
+steuerpilot.exe
+tmp/
+.env
+.DS_Store
+*.swp
+.serena/
+src/.serena/
