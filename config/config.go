@@ -8,11 +8,11 @@ import (
 )
 
 type Config struct {
-	Port                string
-	AnthropicAPIKey     string
-	SessionSecret       string
-	SteuerparameterPath string
-	IsDev               bool
+	Port            string
+	AnthropicAPIKey string
+	SessionSecret   string
+	IsDev           bool
+	NeedsSetup      bool // true if no API key found at startup
 }
 
 func Load() Config {
@@ -20,9 +20,6 @@ func Load() Config {
 		_ = godotenv.Load()
 	}
 	key := os.Getenv("ANTHROPIC_API_KEY")
-	if key == "" {
-		log.Fatal("ANTHROPIC_API_KEY is required")
-	}
 	secret := os.Getenv("SESSION_SECRET")
 	if secret == "" && os.Getenv("ENV") == "production" {
 		log.Fatal("SESSION_SECRET is required in production")
@@ -31,15 +28,11 @@ func Load() Config {
 	if port == "" {
 		port = "3000"
 	}
-	path := os.Getenv("STEUERPARAMETER_PATH")
-	if path == "" {
-		path = "./docs/steuerparameter.json"
-	}
 	return Config{
-		Port:                port,
-		AnthropicAPIKey:     key,
-		SessionSecret:       secret,
-		SteuerparameterPath: path,
-		IsDev:               os.Getenv("ENV") != "production",
+		Port:            port,
+		AnthropicAPIKey: key,
+		SessionSecret:   secret,
+		IsDev:           os.Getenv("ENV") != "production",
+		NeedsSetup:      key == "",
 	}
 }

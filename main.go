@@ -21,8 +21,10 @@ var steuerparameterData []byte
 func main() {
 	cfg := config.Load()
 
-	// Initialise Claude client
-	claude.Init(cfg.AnthropicAPIKey)
+	// Initialise Claude client (skipped if no key — setup page handles it)
+	if !cfg.NeedsSetup {
+		claude.Init(cfg.AnthropicAPIKey)
+	}
 
 	// Load Steuerparameter from embedded JSON
 	params, err := tax.LoadSteuerparameterFromBytes(steuerparameterData)
@@ -43,7 +45,7 @@ func main() {
 	app.Static("/", "./static")
 
 	// --- Routes ---
-	h := handlers.New(cfg, params)
+	h := handlers.New(&cfg, params)
 
 	app.Get("/", h.Landing)
 	app.Get("/upload", h.Upload)

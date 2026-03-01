@@ -12,3 +12,6 @@ func Init(apiKey string) {
 	c := anthropic.NewClient(option.WithAPIKey(apiKey))
 	client = &c
 }
+
+// IsInitialized reports whether the Anthropic client has been configured.
+func IsInitialized() bool { return client != nil }

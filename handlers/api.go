@@ -19,11 +19,11 @@ import (
 
 // Handler is the top-level handler struct, shared across all handler files.
 type Handler struct {
-	cfg    config.Config
+	cfg    *config.Config
 	params models.SteuerparameterDB
 }
 
-func New(cfg config.Config, params models.SteuerparameterDB) *Handler {
+func New(cfg *config.Config, params models.SteuerparameterDB) *Handler {
 	return &Handler{cfg: cfg, params: params}
 }
 
