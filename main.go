@@ -40,6 +40,7 @@ func main() {
 	app.Use(recover.New())
 	app.Use(logger.New())
 	app.Use(appmiddleware.Session(cfg))
+	app.Use(appmiddleware.RequireSetup())
 
 	// --- Static files ---
 	app.Static("/", "./static")
