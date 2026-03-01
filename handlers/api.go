@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"strings"
 
 	"github.com/a-h/templ"
 	"github.com/gofiber/fiber/v2"
@@ -13,7 +14,9 @@ import (
 	"steuerpilot/internal/claude"
 	"steuerpilot/internal/models"
 	"steuerpilot/internal/session"
+	"steuerpilot/internal/userconfig"
 	"steuerpilot/templates/components"
+	"steuerpilot/templates/pages"
 	"steuerpilot/templates/partials"
 )
 
@@ -40,6 +43,20 @@ func htmxRedirect(c *fiber.Ctx, url string) error {
 		return c.SendStatus(fiber.StatusOK)
 	}
 	return c.Redirect(url)
+}
+
+// SaveSetup persists the API key entered on the setup page and initialises the Claude client.
+func (h *Handler) SaveSetup(c *fiber.Ctx) error {
+	key := strings.TrimSpace(c.FormValue("api_key"))
+	if !strings.HasPrefix(key, "sk-ant-") || len(key) < 20 {
+		return render(c, pages.Setup("Ungültiger Schlüssel. Er muss mit sk-ant- beginnen."))
+	}
+	if err := userconfig.Save(userconfig.UserConfig{AnthropicAPIKey: key}); err != nil {
+		return render(c, pages.Setup("Fehler beim Speichern: "+err.Error()))
+	}
+	h.cfg.AnthropicAPIKey = key
+	claude.Init(key)
+	return c.Redirect("/")
 }
 
 // HandleUpload processes a document upload via Claude Vision and stores the result in session.

@@ -47,6 +47,9 @@ func main() {
 	// --- Routes ---
 	h := handlers.New(&cfg, params)
 
+	app.Get("/setup", h.Setup)
+	app.Post("/setup/save", h.SaveSetup)
+
 	app.Get("/", h.Landing)
 	app.Get("/upload", h.Upload)
 	app.Post("/api/upload", h.HandleUpload)
