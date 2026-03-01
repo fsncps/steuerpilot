@@ -1,6 +1,7 @@
 package main
 
 import (
+	_ "embed"
 	"log"
 
 	"github.com/gofiber/fiber/v2"
@@ -14,14 +15,17 @@ import (
 	appmiddleware "steuerpilot/middleware"
 )
 
+//go:embed docs/steuerparameter.json
+var steuerparameterData []byte
+
 func main() {
 	cfg := config.Load()
 
 	// Initialise Claude client
 	claude.Init(cfg.AnthropicAPIKey)
 
-	// Load Steuerparameter at startup — fail fast if missing or malformed
-	params, err := tax.LoadSteuerparameter(cfg.SteuerparameterPath)
+	// Load Steuerparameter from embedded JSON
+	params, err := tax.LoadSteuerparameterFromBytes(steuerparameterData)
 	if err != nil {
 		log.Fatalf("Steuerparameter konnten nicht geladen werden: %v", err)
 	}

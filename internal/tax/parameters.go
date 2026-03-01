@@ -22,6 +22,15 @@ func LoadSteuerparameter(path string) (models.SteuerparameterDB, error) {
 	return params, nil
 }
 
+// LoadSteuerparameterFromBytes parses a JSON byte slice — used with go:embed.
+func LoadSteuerparameterFromBytes(data []byte) (models.SteuerparameterDB, error) {
+	var params models.SteuerparameterDB
+	if err := json.Unmarshal(data, &params); err != nil {
+		return models.SteuerparameterDB{}, err
+	}
+	return params, nil
+}
+
 // GetAlleGemeinden returns all municipality names from the Steuerfuesse map,
 // sorted alphabetically — used to populate the Gemeinde <select>.
 func GetAlleGemeinden(params models.SteuerparameterDB) []string {
