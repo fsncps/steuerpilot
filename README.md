@@ -1,13 +1,13 @@
 # SteuerPilot SG
 
-KI-gestützte Web-App zur Vorbereitung der Steuererklärung für Privatpersonen im Kanton St. Gallen.
+KI-gestützte Web-App zur Vorbereitung der Steuererklärung für Privatpersonen im Kanton St. Gallen. **GO-VERSION.**
 
 Lohnausweis, Kontoauszug und Säule-3a-Belege hochladen → Claude Vision extrahiert die Daten →
 5-Schritt-Wizard → lokale Steuerberechnung → PDF-Export für E-Tax SG.
 
 ---
 
-## Für Robin (Windows)
+## (Windows)
 
 1. `steuerpilot.exe` herunterladen und starten
 2. Browser öffnet sich automatisch
